@@ -1,0 +1,3178 @@
+{
+  "learningData": [
+    {
+      "id": "873b4283-57dd-4cdb-b9d0-046c03cca31c",
+      "timestamp": 1757793916614,
+      "testContext": {
+        "testName": "",
+        "testType": "ui",
+        "startTime": 1757793906310,
+        "aiAnalysis": {
+          "id": "4e951ed1-79c1-4a4e-893a-e9a6988485c4",
+          "timestamp": 1757793916614,
+          "testFunction": "async (testData) => {\n        // Simulate a test function\n        return { success: true, data: testData };\n    }",
+          "testData": {
+            "element": {
+              "selector": "#login-button",
+              "description": "Login button on homepage"
+            }
+          },
+          "potentialIssues": [],
+          "recommendations": [
+            "Implement actual testing logic in the test function, such as interacting with the element specified in the test data and asserting expected behavior.",
+            "Use the 'element' object in the test data to perform actions or assertions on the specified element.",
+            "Do not hard-code the success status in the return object. Instead, determine the success status based on the outcome of the test."
+          ],
+          "confidence": 100,
+          "riskLevel": "medium"
+        }
+      },
+      "result": {
+        "success": true,
+        "data": {
+          "element": {
+            "selector": "#login-button",
+            "description": "Login button on homepage"
+          }
+        }
+      },
+      "patterns": [],
+      "success": true
+    },
+    {
+      "id": "068b6e15-4088-4283-9e21-d1eaa747875c",
+      "timestamp": 1757793916616,
+      "testContext": {
+        "testName": "",
+        "testType": "ui",
+        "startTime": 1757793906310,
+        "aiAnalysis": {
+          "id": "4e951ed1-79c1-4a4e-893a-e9a6988485c4",
+          "timestamp": 1757793916614,
+          "testFunction": "async (testData) => {\n        // Simulate a test function\n        return { success: true, data: testData };\n    }",
+          "testData": {
+            "element": {
+              "selector": "#login-button",
+              "description": "Login button on homepage"
+            }
+          },
+          "potentialIssues": [],
+          "recommendations": [
+            "Implement actual testing logic in the test function, such as interacting with the element specified in the test data and asserting expected behavior.",
+            "Use the 'element' object in the test data to perform actions or assertions on the specified element.",
+            "Do not hard-code the success status in the return object. Instead, determine the success status based on the outcome of the test."
+          ],
+          "confidence": 100,
+          "riskLevel": "medium"
+        }
+      },
+      "result": {
+        "success": true,
+        "data": {
+          "element": {
+            "selector": "#login-button",
+            "description": "Login button on homepage"
+          }
+        }
+      },
+      "patterns": [],
+      "success": true
+    },
+    {
+      "id": "7e1aaa91-f663-4777-8f27-61452f86e5f2",
+      "timestamp": 1757793926572,
+      "testContext": {
+        "testName": "API Demo Test",
+        "testType": "api",
+        "startTime": 1757793916621,
+        "aiAnalysis": {
+          "id": "2efbe9cc-dbd6-48db-af0e-75995dc727df",
+          "timestamp": 1757793926444,
+          "testFunction": "async (testData) => {\n        const { endpoint, method, baseUrl } = testData;\n        \n        // This test might fail if the API endpoint changes\n        const response = await fetch(`${baseUrl}${endpoint}`, {\n            method: method,\n            headers: {\n                'Content-Type': 'application/json'\n            }\n        });\n        \n        if (!response.ok) {\n            throw new Error(`API request failed: ${response.status} ${response.statusText}`);\n        }\n        \n        const data = await response.json();\n        return data;\n    }",
+          "testData": {
+            "endpoint": "/users",
+            "method": "GET",
+            "baseUrl": "https://jsonplaceholder.typicode.com",
+            "expectedResponse": {
+              "id": {
+                "inverse": false
+              },
+              "name": {
+                "inverse": false
+              },
+              "email": {
+                "inverse": false
+              }
+            }
+          },
+          "potentialIssues": [],
+          "recommendations": [
+            "Implement validation of the response data structure and content against the expected response.",
+            "Implement error handling for network errors or timeouts during the fetch request.",
+            "Implement error handling for cases where the response is not JSON-formatted.",
+            "Implement error handling for cases where the response is OK but the data is null or undefined.",
+            "Implement error handling for cases where the response status is OK but the status text is an error message."
+          ],
+          "confidence": 90,
+          "riskLevel": "high"
+        }
+      },
+      "result": [
+        {
+          "id": 1,
+          "name": "Leanne Graham",
+          "username": "Bret",
+          "email": "Sincere@april.biz",
+          "address": {
+            "street": "Kulas Light",
+            "suite": "Apt. 556",
+            "city": "Gwenborough",
+            "zipcode": "92998-3874",
+            "geo": {
+              "lat": "-37.3159",
+              "lng": "81.1496"
+            }
+          },
+          "phone": "1-770-736-8031 x56442",
+          "website": "hildegard.org",
+          "company": {
+            "name": "Romaguera-Crona",
+            "catchPhrase": "Multi-layered client-server neural-net",
+            "bs": "harness real-time e-markets"
+          }
+        },
+        {
+          "id": 2,
+          "name": "Ervin Howell",
+          "username": "Antonette",
+          "email": "Shanna@melissa.tv",
+          "address": {
+            "street": "Victor Plains",
+            "suite": "Suite 879",
+            "city": "Wisokyburgh",
+            "zipcode": "90566-7771",
+            "geo": {
+              "lat": "-43.9509",
+              "lng": "-34.4618"
+            }
+          },
+          "phone": "010-692-6593 x09125",
+          "website": "anastasia.net",
+          "company": {
+            "name": "Deckow-Crist",
+            "catchPhrase": "Proactive didactic contingency",
+            "bs": "synergize scalable supply-chains"
+          }
+        },
+        {
+          "id": 3,
+          "name": "Clementine Bauch",
+          "username": "Samantha",
+          "email": "Nathan@yesenia.net",
+          "address": {
+            "street": "Douglas Extension",
+            "suite": "Suite 847",
+            "city": "McKenziehaven",
+            "zipcode": "59590-4157",
+            "geo": {
+              "lat": "-68.6102",
+              "lng": "-47.0653"
+            }
+          },
+          "phone": "1-463-123-4447",
+          "website": "ramiro.info",
+          "company": {
+            "name": "Romaguera-Jacobson",
+            "catchPhrase": "Face to face bifurcated interface",
+            "bs": "e-enable strategic applications"
+          }
+        },
+        {
+          "id": 4,
+          "name": "Patricia Lebsack",
+          "username": "Karianne",
+          "email": "Julianne.OConner@kory.org",
+          "address": {
+            "street": "Hoeger Mall",
+            "suite": "Apt. 692",
+            "city": "South Elvis",
+            "zipcode": "53919-4257",
+            "geo": {
+              "lat": "29.4572",
+              "lng": "-164.2990"
+            }
+          },
+          "phone": "493-170-9623 x156",
+          "website": "kale.biz",
+          "company": {
+            "name": "Robel-Corkery",
+            "catchPhrase": "Multi-tiered zero tolerance productivity",
+            "bs": "transition cutting-edge web services"
+          }
+        },
+        {
+          "id": 5,
+          "name": "Chelsey Dietrich",
+          "username": "Kamren",
+          "email": "Lucio_Hettinger@annie.ca",
+          "address": {
+            "street": "Skiles Walks",
+            "suite": "Suite 351",
+            "city": "Roscoeview",
+            "zipcode": "33263",
+            "geo": {
+              "lat": "-31.8129",
+              "lng": "62.5342"
+            }
+          },
+          "phone": "(254)954-1289",
+          "website": "demarco.info",
+          "company": {
+            "name": "Keebler LLC",
+            "catchPhrase": "User-centric fault-tolerant solution",
+            "bs": "revolutionize end-to-end systems"
+          }
+        },
+        {
+          "id": 6,
+          "name": "Mrs. Dennis Schulist",
+          "username": "Leopoldo_Corkery",
+          "email": "Karley_Dach@jasper.info",
+          "address": {
+            "street": "Norberto Crossing",
+            "suite": "Apt. 950",
+            "city": "South Christy",
+            "zipcode": "23505-1337",
+            "geo": {
+              "lat": "-71.4197",
+              "lng": "71.7478"
+            }
+          },
+          "phone": "1-477-935-8478 x6430",
+          "website": "ola.org",
+          "company": {
+            "name": "Considine-Lockman",
+            "catchPhrase": "Synchronised bottom-line interface",
+            "bs": "e-enable innovative applications"
+          }
+        },
+        {
+          "id": 7,
+          "name": "Kurtis Weissnat",
+          "username": "Elwyn.Skiles",
+          "email": "Telly.Hoeger@billy.biz",
+          "address": {
+            "street": "Rex Trail",
+            "suite": "Suite 280",
+            "city": "Howemouth",
+            "zipcode": "58804-1099",
+            "geo": {
+              "lat": "24.8918",
+              "lng": "21.8984"
+            }
+          },
+          "phone": "210.067.6132",
+          "website": "elvis.io",
+          "company": {
+            "name": "Johns Group",
+            "catchPhrase": "Configurable multimedia task-force",
+            "bs": "generate enterprise e-tailers"
+          }
+        },
+        {
+          "id": 8,
+          "name": "Nicholas Runolfsdottir V",
+          "username": "Maxime_Nienow",
+          "email": "Sherwood@rosamond.me",
+          "address": {
+            "street": "Ellsworth Summit",
+            "suite": "Suite 729",
+            "city": "Aliyaview",
+            "zipcode": "45169",
+            "geo": {
+              "lat": "-14.3990",
+              "lng": "-120.7677"
+            }
+          },
+          "phone": "586.493.6943 x140",
+          "website": "jacynthe.com",
+          "company": {
+            "name": "Abernathy Group",
+            "catchPhrase": "Implemented secondary concept",
+            "bs": "e-enable extensible e-tailers"
+          }
+        },
+        {
+          "id": 9,
+          "name": "Glenna Reichert",
+          "username": "Delphine",
+          "email": "Chaim_McDermott@dana.io",
+          "address": {
+            "street": "Dayna Park",
+            "suite": "Suite 449",
+            "city": "Bartholomebury",
+            "zipcode": "76495-3109",
+            "geo": {
+              "lat": "24.6463",
+              "lng": "-168.8889"
+            }
+          },
+          "phone": "(775)976-6794 x41206",
+          "website": "conrad.com",
+          "company": {
+            "name": "Yost and Sons",
+            "catchPhrase": "Switchable contextually-based project",
+            "bs": "aggregate real-time technologies"
+          }
+        },
+        {
+          "id": 10,
+          "name": "Clementina DuBuque",
+          "username": "Moriah.Stanton",
+          "email": "Rey.Padberg@karina.biz",
+          "address": {
+            "street": "Kattie Turnpike",
+            "suite": "Suite 198",
+            "city": "Lebsackbury",
+            "zipcode": "31428-2261",
+            "geo": {
+              "lat": "-38.2386",
+              "lng": "57.2232"
+            }
+          },
+          "phone": "024-648-3804",
+          "website": "ambrose.net",
+          "company": {
+            "name": "Hoeger LLC",
+            "catchPhrase": "Centralized empowering task-force",
+            "bs": "target end-to-end models"
+          }
+        }
+      ],
+      "patterns": [],
+      "success": false
+    },
+    {
+      "id": "ef324c1a-d1b8-4271-8c77-c8d884a7152e",
+      "timestamp": 1757794293320,
+      "testContext": {
+        "testName": "",
+        "testType": "ui",
+        "startTime": 1757794277030,
+        "aiAnalysis": {
+          "id": "47fc7607-a6a6-4449-ace0-5dc2fd7c0e5b",
+          "timestamp": 1757794293319,
+          "testFunction": "async (testData) => {\n        // Simulate a test function\n        return { success: true, data: testData };\n    }",
+          "testData": {
+            "element": {
+              "selector": "#login-button",
+              "description": "Login button on homepage"
+            }
+          },
+          "potentialIssues": [],
+          "recommendations": [
+            "Implement actual testing logic in the test function, such as interacting with the UI element specified in the test data and asserting expected behavior.",
+            "Use the 'element' object in the test data to perform actions or assertions on the specified UI element.",
+            "Do not hard-code the success status in the return object. Instead, determine the success status based on the outcome of the test.",
+            "Implement error handling in the test function to catch and handle any errors or exceptions that may occur during the test."
+          ],
+          "confidence": 100,
+          "riskLevel": "high"
+        }
+      },
+      "result": {
+        "success": true,
+        "data": {
+          "element": {
+            "selector": "#login-button",
+            "description": "Login button on homepage"
+          }
+        }
+      },
+      "patterns": [],
+      "success": true
+    },
+    {
+      "id": "09fb451d-9347-49b4-bbf3-6201c9e2c664",
+      "timestamp": 1757794293321,
+      "testContext": {
+        "testName": "",
+        "testType": "ui",
+        "startTime": 1757794277030,
+        "aiAnalysis": {
+          "id": "47fc7607-a6a6-4449-ace0-5dc2fd7c0e5b",
+          "timestamp": 1757794293319,
+          "testFunction": "async (testData) => {\n        // Simulate a test function\n        return { success: true, data: testData };\n    }",
+          "testData": {
+            "element": {
+              "selector": "#login-button",
+              "description": "Login button on homepage"
+            }
+          },
+          "potentialIssues": [],
+          "recommendations": [
+            "Implement actual testing logic in the test function, such as interacting with the UI element specified in the test data and asserting expected behavior.",
+            "Use the 'element' object in the test data to perform actions or assertions on the specified UI element.",
+            "Do not hard-code the success status in the return object. Instead, determine the success status based on the outcome of the test.",
+            "Implement error handling in the test function to catch and handle any errors or exceptions that may occur during the test."
+          ],
+          "confidence": 100,
+          "riskLevel": "high"
+        }
+      },
+      "result": {
+        "success": true,
+        "data": {
+          "element": {
+            "selector": "#login-button",
+            "description": "Login button on homepage"
+          }
+        }
+      },
+      "patterns": [],
+      "success": true
+    },
+    {
+      "id": "ba707aea-ba40-411c-8858-31842866fbae",
+      "timestamp": 1757794299491,
+      "testContext": {
+        "testName": "API Demo Test",
+        "testType": "api",
+        "startTime": 1757794293327,
+        "aiAnalysis": {
+          "id": "3795f1ee-2783-4ccd-aeda-874fed0643b6",
+          "timestamp": 1757794299365,
+          "testFunction": "async (testData) => {\n        const { endpoint, method, baseUrl } = testData;\n        \n        // This test might fail if the API endpoint changes\n        const response = await fetch(`${baseUrl}${endpoint}`, {\n            method: method,\n            headers: {\n                'Content-Type': 'application/json'\n            }\n        });\n        \n        if (!response.ok) {\n            throw new Error(`API request failed: ${response.status} ${response.statusText}`);\n        }\n        \n        const data = await response.json();\n        return data;\n    }",
+          "testData": {
+            "endpoint": "/users",
+            "method": "GET",
+            "baseUrl": "https://jsonplaceholder.typicode.com",
+            "expectedResponse": {
+              "id": {
+                "inverse": false
+              },
+              "name": {
+                "inverse": false
+              },
+              "email": {
+                "inverse": false
+              }
+            }
+          },
+          "potentialIssues": [],
+          "recommendations": [
+            "Implement response validation to compare the actual response with the expected response.",
+            "Add error handling for network issues or timeouts.",
+            "Add checks for unexpected response formats or missing fields in the response.",
+            "Consider using a configuration file or environment variables to manage API endpoints, so changes can be made in one place."
+          ],
+          "confidence": 80,
+          "riskLevel": "high"
+        }
+      },
+      "result": [
+        {
+          "id": 1,
+          "name": "Leanne Graham",
+          "username": "Bret",
+          "email": "Sincere@april.biz",
+          "address": {
+            "street": "Kulas Light",
+            "suite": "Apt. 556",
+            "city": "Gwenborough",
+            "zipcode": "92998-3874",
+            "geo": {
+              "lat": "-37.3159",
+              "lng": "81.1496"
+            }
+          },
+          "phone": "1-770-736-8031 x56442",
+          "website": "hildegard.org",
+          "company": {
+            "name": "Romaguera-Crona",
+            "catchPhrase": "Multi-layered client-server neural-net",
+            "bs": "harness real-time e-markets"
+          }
+        },
+        {
+          "id": 2,
+          "name": "Ervin Howell",
+          "username": "Antonette",
+          "email": "Shanna@melissa.tv",
+          "address": {
+            "street": "Victor Plains",
+            "suite": "Suite 879",
+            "city": "Wisokyburgh",
+            "zipcode": "90566-7771",
+            "geo": {
+              "lat": "-43.9509",
+              "lng": "-34.4618"
+            }
+          },
+          "phone": "010-692-6593 x09125",
+          "website": "anastasia.net",
+          "company": {
+            "name": "Deckow-Crist",
+            "catchPhrase": "Proactive didactic contingency",
+            "bs": "synergize scalable supply-chains"
+          }
+        },
+        {
+          "id": 3,
+          "name": "Clementine Bauch",
+          "username": "Samantha",
+          "email": "Nathan@yesenia.net",
+          "address": {
+            "street": "Douglas Extension",
+            "suite": "Suite 847",
+            "city": "McKenziehaven",
+            "zipcode": "59590-4157",
+            "geo": {
+              "lat": "-68.6102",
+              "lng": "-47.0653"
+            }
+          },
+          "phone": "1-463-123-4447",
+          "website": "ramiro.info",
+          "company": {
+            "name": "Romaguera-Jacobson",
+            "catchPhrase": "Face to face bifurcated interface",
+            "bs": "e-enable strategic applications"
+          }
+        },
+        {
+          "id": 4,
+          "name": "Patricia Lebsack",
+          "username": "Karianne",
+          "email": "Julianne.OConner@kory.org",
+          "address": {
+            "street": "Hoeger Mall",
+            "suite": "Apt. 692",
+            "city": "South Elvis",
+            "zipcode": "53919-4257",
+            "geo": {
+              "lat": "29.4572",
+              "lng": "-164.2990"
+            }
+          },
+          "phone": "493-170-9623 x156",
+          "website": "kale.biz",
+          "company": {
+            "name": "Robel-Corkery",
+            "catchPhrase": "Multi-tiered zero tolerance productivity",
+            "bs": "transition cutting-edge web services"
+          }
+        },
+        {
+          "id": 5,
+          "name": "Chelsey Dietrich",
+          "username": "Kamren",
+          "email": "Lucio_Hettinger@annie.ca",
+          "address": {
+            "street": "Skiles Walks",
+            "suite": "Suite 351",
+            "city": "Roscoeview",
+            "zipcode": "33263",
+            "geo": {
+              "lat": "-31.8129",
+              "lng": "62.5342"
+            }
+          },
+          "phone": "(254)954-1289",
+          "website": "demarco.info",
+          "company": {
+            "name": "Keebler LLC",
+            "catchPhrase": "User-centric fault-tolerant solution",
+            "bs": "revolutionize end-to-end systems"
+          }
+        },
+        {
+          "id": 6,
+          "name": "Mrs. Dennis Schulist",
+          "username": "Leopoldo_Corkery",
+          "email": "Karley_Dach@jasper.info",
+          "address": {
+            "street": "Norberto Crossing",
+            "suite": "Apt. 950",
+            "city": "South Christy",
+            "zipcode": "23505-1337",
+            "geo": {
+              "lat": "-71.4197",
+              "lng": "71.7478"
+            }
+          },
+          "phone": "1-477-935-8478 x6430",
+          "website": "ola.org",
+          "company": {
+            "name": "Considine-Lockman",
+            "catchPhrase": "Synchronised bottom-line interface",
+            "bs": "e-enable innovative applications"
+          }
+        },
+        {
+          "id": 7,
+          "name": "Kurtis Weissnat",
+          "username": "Elwyn.Skiles",
+          "email": "Telly.Hoeger@billy.biz",
+          "address": {
+            "street": "Rex Trail",
+            "suite": "Suite 280",
+            "city": "Howemouth",
+            "zipcode": "58804-1099",
+            "geo": {
+              "lat": "24.8918",
+              "lng": "21.8984"
+            }
+          },
+          "phone": "210.067.6132",
+          "website": "elvis.io",
+          "company": {
+            "name": "Johns Group",
+            "catchPhrase": "Configurable multimedia task-force",
+            "bs": "generate enterprise e-tailers"
+          }
+        },
+        {
+          "id": 8,
+          "name": "Nicholas Runolfsdottir V",
+          "username": "Maxime_Nienow",
+          "email": "Sherwood@rosamond.me",
+          "address": {
+            "street": "Ellsworth Summit",
+            "suite": "Suite 729",
+            "city": "Aliyaview",
+            "zipcode": "45169",
+            "geo": {
+              "lat": "-14.3990",
+              "lng": "-120.7677"
+            }
+          },
+          "phone": "586.493.6943 x140",
+          "website": "jacynthe.com",
+          "company": {
+            "name": "Abernathy Group",
+            "catchPhrase": "Implemented secondary concept",
+            "bs": "e-enable extensible e-tailers"
+          }
+        },
+        {
+          "id": 9,
+          "name": "Glenna Reichert",
+          "username": "Delphine",
+          "email": "Chaim_McDermott@dana.io",
+          "address": {
+            "street": "Dayna Park",
+            "suite": "Suite 449",
+            "city": "Bartholomebury",
+            "zipcode": "76495-3109",
+            "geo": {
+              "lat": "24.6463",
+              "lng": "-168.8889"
+            }
+          },
+          "phone": "(775)976-6794 x41206",
+          "website": "conrad.com",
+          "company": {
+            "name": "Yost and Sons",
+            "catchPhrase": "Switchable contextually-based project",
+            "bs": "aggregate real-time technologies"
+          }
+        },
+        {
+          "id": 10,
+          "name": "Clementina DuBuque",
+          "username": "Moriah.Stanton",
+          "email": "Rey.Padberg@karina.biz",
+          "address": {
+            "street": "Kattie Turnpike",
+            "suite": "Suite 198",
+            "city": "Lebsackbury",
+            "zipcode": "31428-2261",
+            "geo": {
+              "lat": "-38.2386",
+              "lng": "57.2232"
+            }
+          },
+          "phone": "024-648-3804",
+          "website": "ambrose.net",
+          "company": {
+            "name": "Hoeger LLC",
+            "catchPhrase": "Centralized empowering task-force",
+            "bs": "target end-to-end models"
+          }
+        }
+      ],
+      "patterns": [],
+      "success": false
+    },
+    {
+      "id": "12291c8f-e8e8-47a6-ab41-e99caf5980c9",
+      "timestamp": 1757794507272,
+      "testContext": {
+        "testName": "",
+        "testType": "ui",
+        "startTime": 1757794494099,
+        "aiAnalysis": {
+          "id": "d29ab504-c784-4890-bf1f-f6404514f3d6",
+          "timestamp": 1757794507271,
+          "testFunction": "async (testData) => {\n        // Simulate a test function\n        return { success: true, data: testData };\n    }",
+          "testData": {
+            "element": {
+              "selector": "#login-button",
+              "description": "Login button on homepage"
+            }
+          },
+          "potentialIssues": [],
+          "recommendations": [
+            "Implement actual testing logic in the test function, such as interacting with the UI element specified in the test data.",
+            "Use assertions to verify the state or behavior of the system under test.",
+            "Handle potential errors or exceptions in the test function to prevent unexpected test failures.",
+            "Consider using a test framework or library that provides utilities for writing and organizing tests."
+          ],
+          "confidence": 100,
+          "riskLevel": "high"
+        }
+      },
+      "result": {
+        "success": true,
+        "data": {
+          "element": {
+            "selector": "#login-button",
+            "description": "Login button on homepage"
+          }
+        }
+      },
+      "patterns": [],
+      "success": true
+    },
+    {
+      "id": "d2d0adc5-21bb-4c6b-9d18-d7c9c9c238bb",
+      "timestamp": 1757794507273,
+      "testContext": {
+        "testName": "",
+        "testType": "ui",
+        "startTime": 1757794494099,
+        "aiAnalysis": {
+          "id": "d29ab504-c784-4890-bf1f-f6404514f3d6",
+          "timestamp": 1757794507271,
+          "testFunction": "async (testData) => {\n        // Simulate a test function\n        return { success: true, data: testData };\n    }",
+          "testData": {
+            "element": {
+              "selector": "#login-button",
+              "description": "Login button on homepage"
+            }
+          },
+          "potentialIssues": [],
+          "recommendations": [
+            "Implement actual testing logic in the test function, such as interacting with the UI element specified in the test data.",
+            "Use assertions to verify the state or behavior of the system under test.",
+            "Handle potential errors or exceptions in the test function to prevent unexpected test failures.",
+            "Consider using a test framework or library that provides utilities for writing and organizing tests."
+          ],
+          "confidence": 100,
+          "riskLevel": "high"
+        }
+      },
+      "result": {
+        "success": true,
+        "data": {
+          "element": {
+            "selector": "#login-button",
+            "description": "Login button on homepage"
+          }
+        }
+      },
+      "patterns": [],
+      "success": true
+    },
+    {
+      "id": "2865d1b4-8b98-419a-8119-cbf3d7d0e82c",
+      "timestamp": 1757794515472,
+      "testContext": {
+        "testName": "API Demo Test",
+        "testType": "api",
+        "startTime": 1757794507280,
+        "aiAnalysis": {
+          "id": "be17d0d8-49d3-4aee-85d6-e430b1b182f5",
+          "timestamp": 1757794515345,
+          "testFunction": "async (testData) => {\n        const { endpoint, method, baseUrl } = testData;\n        \n        // This test might fail if the API endpoint changes\n        const response = await fetch(`${baseUrl}${endpoint}`, {\n            method: method,\n            headers: {\n                'Content-Type': 'application/json'\n            }\n        });\n        \n        if (!response.ok) {\n            throw new Error(`API request failed: ${response.status} ${response.statusText}`);\n        }\n        \n        const data = await response.json();\n        return data;\n    }",
+          "testData": {
+            "endpoint": "/users",
+            "method": "GET",
+            "baseUrl": "https://jsonplaceholder.typicode.com",
+            "expectedResponse": {
+              "id": {
+                "inverse": false
+              },
+              "name": {
+                "inverse": false
+              },
+              "email": {
+                "inverse": false
+              }
+            }
+          },
+          "potentialIssues": [],
+          "recommendations": [
+            "Implement validation of the response data against the expected response to ensure the API is returning the correct data.",
+            "Implement error handling for potential network errors or timeouts during the fetch request.",
+            "Implement error handling for potential errors when parsing the response data as JSON.",
+            "Implement error handling for cases where the response is OK but the data is null or undefined.",
+            "Implement error handling for cases where the response status is OK but the status text is an error message."
+          ],
+          "confidence": 90,
+          "riskLevel": "high"
+        }
+      },
+      "result": [
+        {
+          "id": 1,
+          "name": "Leanne Graham",
+          "username": "Bret",
+          "email": "Sincere@april.biz",
+          "address": {
+            "street": "Kulas Light",
+            "suite": "Apt. 556",
+            "city": "Gwenborough",
+            "zipcode": "92998-3874",
+            "geo": {
+              "lat": "-37.3159",
+              "lng": "81.1496"
+            }
+          },
+          "phone": "1-770-736-8031 x56442",
+          "website": "hildegard.org",
+          "company": {
+            "name": "Romaguera-Crona",
+            "catchPhrase": "Multi-layered client-server neural-net",
+            "bs": "harness real-time e-markets"
+          }
+        },
+        {
+          "id": 2,
+          "name": "Ervin Howell",
+          "username": "Antonette",
+          "email": "Shanna@melissa.tv",
+          "address": {
+            "street": "Victor Plains",
+            "suite": "Suite 879",
+            "city": "Wisokyburgh",
+            "zipcode": "90566-7771",
+            "geo": {
+              "lat": "-43.9509",
+              "lng": "-34.4618"
+            }
+          },
+          "phone": "010-692-6593 x09125",
+          "website": "anastasia.net",
+          "company": {
+            "name": "Deckow-Crist",
+            "catchPhrase": "Proactive didactic contingency",
+            "bs": "synergize scalable supply-chains"
+          }
+        },
+        {
+          "id": 3,
+          "name": "Clementine Bauch",
+          "username": "Samantha",
+          "email": "Nathan@yesenia.net",
+          "address": {
+            "street": "Douglas Extension",
+            "suite": "Suite 847",
+            "city": "McKenziehaven",
+            "zipcode": "59590-4157",
+            "geo": {
+              "lat": "-68.6102",
+              "lng": "-47.0653"
+            }
+          },
+          "phone": "1-463-123-4447",
+          "website": "ramiro.info",
+          "company": {
+            "name": "Romaguera-Jacobson",
+            "catchPhrase": "Face to face bifurcated interface",
+            "bs": "e-enable strategic applications"
+          }
+        },
+        {
+          "id": 4,
+          "name": "Patricia Lebsack",
+          "username": "Karianne",
+          "email": "Julianne.OConner@kory.org",
+          "address": {
+            "street": "Hoeger Mall",
+            "suite": "Apt. 692",
+            "city": "South Elvis",
+            "zipcode": "53919-4257",
+            "geo": {
+              "lat": "29.4572",
+              "lng": "-164.2990"
+            }
+          },
+          "phone": "493-170-9623 x156",
+          "website": "kale.biz",
+          "company": {
+            "name": "Robel-Corkery",
+            "catchPhrase": "Multi-tiered zero tolerance productivity",
+            "bs": "transition cutting-edge web services"
+          }
+        },
+        {
+          "id": 5,
+          "name": "Chelsey Dietrich",
+          "username": "Kamren",
+          "email": "Lucio_Hettinger@annie.ca",
+          "address": {
+            "street": "Skiles Walks",
+            "suite": "Suite 351",
+            "city": "Roscoeview",
+            "zipcode": "33263",
+            "geo": {
+              "lat": "-31.8129",
+              "lng": "62.5342"
+            }
+          },
+          "phone": "(254)954-1289",
+          "website": "demarco.info",
+          "company": {
+            "name": "Keebler LLC",
+            "catchPhrase": "User-centric fault-tolerant solution",
+            "bs": "revolutionize end-to-end systems"
+          }
+        },
+        {
+          "id": 6,
+          "name": "Mrs. Dennis Schulist",
+          "username": "Leopoldo_Corkery",
+          "email": "Karley_Dach@jasper.info",
+          "address": {
+            "street": "Norberto Crossing",
+            "suite": "Apt. 950",
+            "city": "South Christy",
+            "zipcode": "23505-1337",
+            "geo": {
+              "lat": "-71.4197",
+              "lng": "71.7478"
+            }
+          },
+          "phone": "1-477-935-8478 x6430",
+          "website": "ola.org",
+          "company": {
+            "name": "Considine-Lockman",
+            "catchPhrase": "Synchronised bottom-line interface",
+            "bs": "e-enable innovative applications"
+          }
+        },
+        {
+          "id": 7,
+          "name": "Kurtis Weissnat",
+          "username": "Elwyn.Skiles",
+          "email": "Telly.Hoeger@billy.biz",
+          "address": {
+            "street": "Rex Trail",
+            "suite": "Suite 280",
+            "city": "Howemouth",
+            "zipcode": "58804-1099",
+            "geo": {
+              "lat": "24.8918",
+              "lng": "21.8984"
+            }
+          },
+          "phone": "210.067.6132",
+          "website": "elvis.io",
+          "company": {
+            "name": "Johns Group",
+            "catchPhrase": "Configurable multimedia task-force",
+            "bs": "generate enterprise e-tailers"
+          }
+        },
+        {
+          "id": 8,
+          "name": "Nicholas Runolfsdottir V",
+          "username": "Maxime_Nienow",
+          "email": "Sherwood@rosamond.me",
+          "address": {
+            "street": "Ellsworth Summit",
+            "suite": "Suite 729",
+            "city": "Aliyaview",
+            "zipcode": "45169",
+            "geo": {
+              "lat": "-14.3990",
+              "lng": "-120.7677"
+            }
+          },
+          "phone": "586.493.6943 x140",
+          "website": "jacynthe.com",
+          "company": {
+            "name": "Abernathy Group",
+            "catchPhrase": "Implemented secondary concept",
+            "bs": "e-enable extensible e-tailers"
+          }
+        },
+        {
+          "id": 9,
+          "name": "Glenna Reichert",
+          "username": "Delphine",
+          "email": "Chaim_McDermott@dana.io",
+          "address": {
+            "street": "Dayna Park",
+            "suite": "Suite 449",
+            "city": "Bartholomebury",
+            "zipcode": "76495-3109",
+            "geo": {
+              "lat": "24.6463",
+              "lng": "-168.8889"
+            }
+          },
+          "phone": "(775)976-6794 x41206",
+          "website": "conrad.com",
+          "company": {
+            "name": "Yost and Sons",
+            "catchPhrase": "Switchable contextually-based project",
+            "bs": "aggregate real-time technologies"
+          }
+        },
+        {
+          "id": 10,
+          "name": "Clementina DuBuque",
+          "username": "Moriah.Stanton",
+          "email": "Rey.Padberg@karina.biz",
+          "address": {
+            "street": "Kattie Turnpike",
+            "suite": "Suite 198",
+            "city": "Lebsackbury",
+            "zipcode": "31428-2261",
+            "geo": {
+              "lat": "-38.2386",
+              "lng": "57.2232"
+            }
+          },
+          "phone": "024-648-3804",
+          "website": "ambrose.net",
+          "company": {
+            "name": "Hoeger LLC",
+            "catchPhrase": "Centralized empowering task-force",
+            "bs": "target end-to-end models"
+          }
+        }
+      ],
+      "patterns": [],
+      "success": false
+    },
+    {
+      "id": "d410be1f-8385-46c2-83b5-6ce03b5e3d6b",
+      "timestamp": 1757795021025,
+      "testContext": {
+        "testName": "",
+        "testType": "ui",
+        "startTime": 1757795008070,
+        "aiAnalysis": {
+          "id": "a56c182a-22f2-4f0e-a994-3ed3bfdf4e94",
+          "timestamp": 1757795021025,
+          "testFunction": "async (testData) => {\n        // Simulate a test function\n        return { success: true, data: testData };\n    }",
+          "testData": {
+            "element": {
+              "selector": "#login-button",
+              "description": "Login button on homepage"
+            }
+          },
+          "potentialIssues": [],
+          "recommendations": [
+            "Implement actual testing logic in the test function, such as interacting with the specified 'element' and verifying its behavior.",
+            "Add error handling to the test function to ensure it behaves correctly with invalid input data.",
+            "Validate the input data to ensure it contains the necessary information for the test."
+          ],
+          "confidence": 80,
+          "riskLevel": "high"
+        }
+      },
+      "result": {
+        "success": true,
+        "data": {
+          "element": {
+            "selector": "#login-button",
+            "description": "Login button on homepage"
+          }
+        }
+      },
+      "patterns": [],
+      "success": true
+    },
+    {
+      "id": "ecdf6246-bce8-4d78-9ea3-e5e96caa9f8b",
+      "timestamp": 1757795021027,
+      "testContext": {
+        "testName": "",
+        "testType": "ui",
+        "startTime": 1757795008070,
+        "aiAnalysis": {
+          "id": "a56c182a-22f2-4f0e-a994-3ed3bfdf4e94",
+          "timestamp": 1757795021025,
+          "testFunction": "async (testData) => {\n        // Simulate a test function\n        return { success: true, data: testData };\n    }",
+          "testData": {
+            "element": {
+              "selector": "#login-button",
+              "description": "Login button on homepage"
+            }
+          },
+          "potentialIssues": [],
+          "recommendations": [
+            "Implement actual testing logic in the test function, such as interacting with the specified 'element' and verifying its behavior.",
+            "Add error handling to the test function to ensure it behaves correctly with invalid input data.",
+            "Validate the input data to ensure it contains the necessary information for the test."
+          ],
+          "confidence": 80,
+          "riskLevel": "high"
+        }
+      },
+      "result": {
+        "success": true,
+        "data": {
+          "element": {
+            "selector": "#login-button",
+            "description": "Login button on homepage"
+          }
+        }
+      },
+      "patterns": [],
+      "success": true
+    },
+    {
+      "id": "0162d333-f39d-4881-8a5a-9c3e97251f1e",
+      "timestamp": 1757795027594,
+      "testContext": {
+        "testName": "API Demo Test",
+        "testType": "api",
+        "startTime": 1757795021034,
+        "aiAnalysis": {
+          "id": "3394a4d4-f6fa-4e98-9c91-a01114afd8f7",
+          "timestamp": 1757795027458,
+          "testFunction": "async (testData) => {\n        const { endpoint, method, baseUrl } = testData;\n        \n        // This test might fail if the API endpoint changes\n        const response = await fetch(`${baseUrl}${endpoint}`, {\n            method: method,\n            headers: {\n                'Content-Type': 'application/json'\n            }\n        });\n        \n        if (!response.ok) {\n            throw new Error(`API request failed: ${response.status} ${response.statusText}`);\n        }\n        \n        const data = await response.json();\n        return data;\n    }",
+          "testData": {
+            "endpoint": "/users",
+            "method": "GET",
+            "baseUrl": "https://jsonplaceholder.typicode.com",
+            "expectedResponse": {
+              "id": {
+                "inverse": false
+              },
+              "name": {
+                "inverse": false
+              },
+              "email": {
+                "inverse": false
+              }
+            }
+          },
+          "potentialIssues": [],
+          "recommendations": [
+            "Implement validation of the response data against the expected response to ensure the API is returning the correct data.",
+            "Implement error handling for potential network errors or timeouts that may occur during the fetch request.",
+            "Implement error handling for potential errors that may occur when parsing the response data as JSON.",
+            "Implement error handling for cases where the response is OK but the data is null or undefined.",
+            "Implement error handling for cases where the response data does not match the expected response."
+          ],
+          "confidence": 90,
+          "riskLevel": "high"
+        }
+      },
+      "result": [
+        {
+          "id": 1,
+          "name": "Leanne Graham",
+          "username": "Bret",
+          "email": "Sincere@april.biz",
+          "address": {
+            "street": "Kulas Light",
+            "suite": "Apt. 556",
+            "city": "Gwenborough",
+            "zipcode": "92998-3874",
+            "geo": {
+              "lat": "-37.3159",
+              "lng": "81.1496"
+            }
+          },
+          "phone": "1-770-736-8031 x56442",
+          "website": "hildegard.org",
+          "company": {
+            "name": "Romaguera-Crona",
+            "catchPhrase": "Multi-layered client-server neural-net",
+            "bs": "harness real-time e-markets"
+          }
+        },
+        {
+          "id": 2,
+          "name": "Ervin Howell",
+          "username": "Antonette",
+          "email": "Shanna@melissa.tv",
+          "address": {
+            "street": "Victor Plains",
+            "suite": "Suite 879",
+            "city": "Wisokyburgh",
+            "zipcode": "90566-7771",
+            "geo": {
+              "lat": "-43.9509",
+              "lng": "-34.4618"
+            }
+          },
+          "phone": "010-692-6593 x09125",
+          "website": "anastasia.net",
+          "company": {
+            "name": "Deckow-Crist",
+            "catchPhrase": "Proactive didactic contingency",
+            "bs": "synergize scalable supply-chains"
+          }
+        },
+        {
+          "id": 3,
+          "name": "Clementine Bauch",
+          "username": "Samantha",
+          "email": "Nathan@yesenia.net",
+          "address": {
+            "street": "Douglas Extension",
+            "suite": "Suite 847",
+            "city": "McKenziehaven",
+            "zipcode": "59590-4157",
+            "geo": {
+              "lat": "-68.6102",
+              "lng": "-47.0653"
+            }
+          },
+          "phone": "1-463-123-4447",
+          "website": "ramiro.info",
+          "company": {
+            "name": "Romaguera-Jacobson",
+            "catchPhrase": "Face to face bifurcated interface",
+            "bs": "e-enable strategic applications"
+          }
+        },
+        {
+          "id": 4,
+          "name": "Patricia Lebsack",
+          "username": "Karianne",
+          "email": "Julianne.OConner@kory.org",
+          "address": {
+            "street": "Hoeger Mall",
+            "suite": "Apt. 692",
+            "city": "South Elvis",
+            "zipcode": "53919-4257",
+            "geo": {
+              "lat": "29.4572",
+              "lng": "-164.2990"
+            }
+          },
+          "phone": "493-170-9623 x156",
+          "website": "kale.biz",
+          "company": {
+            "name": "Robel-Corkery",
+            "catchPhrase": "Multi-tiered zero tolerance productivity",
+            "bs": "transition cutting-edge web services"
+          }
+        },
+        {
+          "id": 5,
+          "name": "Chelsey Dietrich",
+          "username": "Kamren",
+          "email": "Lucio_Hettinger@annie.ca",
+          "address": {
+            "street": "Skiles Walks",
+            "suite": "Suite 351",
+            "city": "Roscoeview",
+            "zipcode": "33263",
+            "geo": {
+              "lat": "-31.8129",
+              "lng": "62.5342"
+            }
+          },
+          "phone": "(254)954-1289",
+          "website": "demarco.info",
+          "company": {
+            "name": "Keebler LLC",
+            "catchPhrase": "User-centric fault-tolerant solution",
+            "bs": "revolutionize end-to-end systems"
+          }
+        },
+        {
+          "id": 6,
+          "name": "Mrs. Dennis Schulist",
+          "username": "Leopoldo_Corkery",
+          "email": "Karley_Dach@jasper.info",
+          "address": {
+            "street": "Norberto Crossing",
+            "suite": "Apt. 950",
+            "city": "South Christy",
+            "zipcode": "23505-1337",
+            "geo": {
+              "lat": "-71.4197",
+              "lng": "71.7478"
+            }
+          },
+          "phone": "1-477-935-8478 x6430",
+          "website": "ola.org",
+          "company": {
+            "name": "Considine-Lockman",
+            "catchPhrase": "Synchronised bottom-line interface",
+            "bs": "e-enable innovative applications"
+          }
+        },
+        {
+          "id": 7,
+          "name": "Kurtis Weissnat",
+          "username": "Elwyn.Skiles",
+          "email": "Telly.Hoeger@billy.biz",
+          "address": {
+            "street": "Rex Trail",
+            "suite": "Suite 280",
+            "city": "Howemouth",
+            "zipcode": "58804-1099",
+            "geo": {
+              "lat": "24.8918",
+              "lng": "21.8984"
+            }
+          },
+          "phone": "210.067.6132",
+          "website": "elvis.io",
+          "company": {
+            "name": "Johns Group",
+            "catchPhrase": "Configurable multimedia task-force",
+            "bs": "generate enterprise e-tailers"
+          }
+        },
+        {
+          "id": 8,
+          "name": "Nicholas Runolfsdottir V",
+          "username": "Maxime_Nienow",
+          "email": "Sherwood@rosamond.me",
+          "address": {
+            "street": "Ellsworth Summit",
+            "suite": "Suite 729",
+            "city": "Aliyaview",
+            "zipcode": "45169",
+            "geo": {
+              "lat": "-14.3990",
+              "lng": "-120.7677"
+            }
+          },
+          "phone": "586.493.6943 x140",
+          "website": "jacynthe.com",
+          "company": {
+            "name": "Abernathy Group",
+            "catchPhrase": "Implemented secondary concept",
+            "bs": "e-enable extensible e-tailers"
+          }
+        },
+        {
+          "id": 9,
+          "name": "Glenna Reichert",
+          "username": "Delphine",
+          "email": "Chaim_McDermott@dana.io",
+          "address": {
+            "street": "Dayna Park",
+            "suite": "Suite 449",
+            "city": "Bartholomebury",
+            "zipcode": "76495-3109",
+            "geo": {
+              "lat": "24.6463",
+              "lng": "-168.8889"
+            }
+          },
+          "phone": "(775)976-6794 x41206",
+          "website": "conrad.com",
+          "company": {
+            "name": "Yost and Sons",
+            "catchPhrase": "Switchable contextually-based project",
+            "bs": "aggregate real-time technologies"
+          }
+        },
+        {
+          "id": 10,
+          "name": "Clementina DuBuque",
+          "username": "Moriah.Stanton",
+          "email": "Rey.Padberg@karina.biz",
+          "address": {
+            "street": "Kattie Turnpike",
+            "suite": "Suite 198",
+            "city": "Lebsackbury",
+            "zipcode": "31428-2261",
+            "geo": {
+              "lat": "-38.2386",
+              "lng": "57.2232"
+            }
+          },
+          "phone": "024-648-3804",
+          "website": "ambrose.net",
+          "company": {
+            "name": "Hoeger LLC",
+            "catchPhrase": "Centralized empowering task-force",
+            "bs": "target end-to-end models"
+          }
+        }
+      ],
+      "patterns": [],
+      "success": false
+    },
+    {
+      "id": "1b57d342-dc4e-4a58-b005-700ed221fce3",
+      "timestamp": 1757795458861,
+      "testContext": {
+        "testName": "",
+        "testType": "ui",
+        "startTime": 1757795448990,
+        "aiAnalysis": {
+          "id": "ee5a1ba4-77b7-442d-a6d6-b3a9d9a32673",
+          "timestamp": 1757795458860,
+          "testFunction": "async (testData) => {\n        // Simulate a test function\n        return { success: true, data: testData };\n    }",
+          "testData": {
+            "element": {
+              "selector": "#login-button",
+              "description": "Login button on homepage"
+            }
+          },
+          "potentialIssues": [],
+          "recommendations": [
+            "Implement actual testing logic in the test function, such as interacting with the element specified in the test data.",
+            "Add error handling to the test function to handle potential issues with the input data.",
+            "Validate the input data before using it in the test function."
+          ],
+          "confidence": 100,
+          "riskLevel": "high"
+        }
+      },
+      "result": {
+        "success": true,
+        "data": {
+          "element": {
+            "selector": "#login-button",
+            "description": "Login button on homepage"
+          }
+        }
+      },
+      "patterns": [],
+      "success": true
+    },
+    {
+      "id": "9e8ccf94-2c49-40de-a8d0-ec62fe465787",
+      "timestamp": 1757795458862,
+      "testContext": {
+        "testName": "",
+        "testType": "ui",
+        "startTime": 1757795448990,
+        "aiAnalysis": {
+          "id": "ee5a1ba4-77b7-442d-a6d6-b3a9d9a32673",
+          "timestamp": 1757795458860,
+          "testFunction": "async (testData) => {\n        // Simulate a test function\n        return { success: true, data: testData };\n    }",
+          "testData": {
+            "element": {
+              "selector": "#login-button",
+              "description": "Login button on homepage"
+            }
+          },
+          "potentialIssues": [],
+          "recommendations": [
+            "Implement actual testing logic in the test function, such as interacting with the element specified in the test data.",
+            "Add error handling to the test function to handle potential issues with the input data.",
+            "Validate the input data before using it in the test function."
+          ],
+          "confidence": 100,
+          "riskLevel": "high"
+        }
+      },
+      "result": {
+        "success": true,
+        "data": {
+          "element": {
+            "selector": "#login-button",
+            "description": "Login button on homepage"
+          }
+        }
+      },
+      "patterns": [],
+      "success": true
+    },
+    {
+      "id": "dd98e459-842b-4a03-adec-cf325d5afb36",
+      "timestamp": 1757795464159,
+      "testContext": {
+        "testName": "API Demo Test",
+        "testType": "api",
+        "startTime": 1757795458870,
+        "aiAnalysis": {
+          "id": "6fa43b91-c019-423d-8d36-d33920c70681",
+          "timestamp": 1757795464043,
+          "testFunction": "async (testData) => {\n        const { endpoint, method, baseUrl } = testData;\n        \n        // This test might fail if the API endpoint changes\n        const response = await fetch(`${baseUrl}${endpoint}`, {\n            method: method,\n            headers: {\n                'Content-Type': 'application/json'\n            }\n        });\n        \n        if (!response.ok) {\n            throw new Error(`API request failed: ${response.status} ${response.statusText}`);\n        }\n        \n        const data = await response.json();\n        return data;\n    }",
+          "testData": {
+            "endpoint": "/users",
+            "method": "GET",
+            "baseUrl": "https://jsonplaceholder.typicode.com",
+            "expectedResponse": {
+              "id": {
+                "inverse": false
+              },
+              "name": {
+                "inverse": false
+              },
+              "email": {
+                "inverse": false
+              }
+            }
+          },
+          "potentialIssues": [],
+          "recommendations": [
+            "Add validation to compare the actual response with the expected response.",
+            "Add error handling for network issues or timeouts.",
+            "Add error handling for unexpected response formats or missing fields.",
+            "Consider using a configuration file or environment variables to manage API endpoints, so changes can be made in one place."
+          ],
+          "confidence": 85,
+          "riskLevel": "high"
+        }
+      },
+      "result": [
+        {
+          "id": 1,
+          "name": "Leanne Graham",
+          "username": "Bret",
+          "email": "Sincere@april.biz",
+          "address": {
+            "street": "Kulas Light",
+            "suite": "Apt. 556",
+            "city": "Gwenborough",
+            "zipcode": "92998-3874",
+            "geo": {
+              "lat": "-37.3159",
+              "lng": "81.1496"
+            }
+          },
+          "phone": "1-770-736-8031 x56442",
+          "website": "hildegard.org",
+          "company": {
+            "name": "Romaguera-Crona",
+            "catchPhrase": "Multi-layered client-server neural-net",
+            "bs": "harness real-time e-markets"
+          }
+        },
+        {
+          "id": 2,
+          "name": "Ervin Howell",
+          "username": "Antonette",
+          "email": "Shanna@melissa.tv",
+          "address": {
+            "street": "Victor Plains",
+            "suite": "Suite 879",
+            "city": "Wisokyburgh",
+            "zipcode": "90566-7771",
+            "geo": {
+              "lat": "-43.9509",
+              "lng": "-34.4618"
+            }
+          },
+          "phone": "010-692-6593 x09125",
+          "website": "anastasia.net",
+          "company": {
+            "name": "Deckow-Crist",
+            "catchPhrase": "Proactive didactic contingency",
+            "bs": "synergize scalable supply-chains"
+          }
+        },
+        {
+          "id": 3,
+          "name": "Clementine Bauch",
+          "username": "Samantha",
+          "email": "Nathan@yesenia.net",
+          "address": {
+            "street": "Douglas Extension",
+            "suite": "Suite 847",
+            "city": "McKenziehaven",
+            "zipcode": "59590-4157",
+            "geo": {
+              "lat": "-68.6102",
+              "lng": "-47.0653"
+            }
+          },
+          "phone": "1-463-123-4447",
+          "website": "ramiro.info",
+          "company": {
+            "name": "Romaguera-Jacobson",
+            "catchPhrase": "Face to face bifurcated interface",
+            "bs": "e-enable strategic applications"
+          }
+        },
+        {
+          "id": 4,
+          "name": "Patricia Lebsack",
+          "username": "Karianne",
+          "email": "Julianne.OConner@kory.org",
+          "address": {
+            "street": "Hoeger Mall",
+            "suite": "Apt. 692",
+            "city": "South Elvis",
+            "zipcode": "53919-4257",
+            "geo": {
+              "lat": "29.4572",
+              "lng": "-164.2990"
+            }
+          },
+          "phone": "493-170-9623 x156",
+          "website": "kale.biz",
+          "company": {
+            "name": "Robel-Corkery",
+            "catchPhrase": "Multi-tiered zero tolerance productivity",
+            "bs": "transition cutting-edge web services"
+          }
+        },
+        {
+          "id": 5,
+          "name": "Chelsey Dietrich",
+          "username": "Kamren",
+          "email": "Lucio_Hettinger@annie.ca",
+          "address": {
+            "street": "Skiles Walks",
+            "suite": "Suite 351",
+            "city": "Roscoeview",
+            "zipcode": "33263",
+            "geo": {
+              "lat": "-31.8129",
+              "lng": "62.5342"
+            }
+          },
+          "phone": "(254)954-1289",
+          "website": "demarco.info",
+          "company": {
+            "name": "Keebler LLC",
+            "catchPhrase": "User-centric fault-tolerant solution",
+            "bs": "revolutionize end-to-end systems"
+          }
+        },
+        {
+          "id": 6,
+          "name": "Mrs. Dennis Schulist",
+          "username": "Leopoldo_Corkery",
+          "email": "Karley_Dach@jasper.info",
+          "address": {
+            "street": "Norberto Crossing",
+            "suite": "Apt. 950",
+            "city": "South Christy",
+            "zipcode": "23505-1337",
+            "geo": {
+              "lat": "-71.4197",
+              "lng": "71.7478"
+            }
+          },
+          "phone": "1-477-935-8478 x6430",
+          "website": "ola.org",
+          "company": {
+            "name": "Considine-Lockman",
+            "catchPhrase": "Synchronised bottom-line interface",
+            "bs": "e-enable innovative applications"
+          }
+        },
+        {
+          "id": 7,
+          "name": "Kurtis Weissnat",
+          "username": "Elwyn.Skiles",
+          "email": "Telly.Hoeger@billy.biz",
+          "address": {
+            "street": "Rex Trail",
+            "suite": "Suite 280",
+            "city": "Howemouth",
+            "zipcode": "58804-1099",
+            "geo": {
+              "lat": "24.8918",
+              "lng": "21.8984"
+            }
+          },
+          "phone": "210.067.6132",
+          "website": "elvis.io",
+          "company": {
+            "name": "Johns Group",
+            "catchPhrase": "Configurable multimedia task-force",
+            "bs": "generate enterprise e-tailers"
+          }
+        },
+        {
+          "id": 8,
+          "name": "Nicholas Runolfsdottir V",
+          "username": "Maxime_Nienow",
+          "email": "Sherwood@rosamond.me",
+          "address": {
+            "street": "Ellsworth Summit",
+            "suite": "Suite 729",
+            "city": "Aliyaview",
+            "zipcode": "45169",
+            "geo": {
+              "lat": "-14.3990",
+              "lng": "-120.7677"
+            }
+          },
+          "phone": "586.493.6943 x140",
+          "website": "jacynthe.com",
+          "company": {
+            "name": "Abernathy Group",
+            "catchPhrase": "Implemented secondary concept",
+            "bs": "e-enable extensible e-tailers"
+          }
+        },
+        {
+          "id": 9,
+          "name": "Glenna Reichert",
+          "username": "Delphine",
+          "email": "Chaim_McDermott@dana.io",
+          "address": {
+            "street": "Dayna Park",
+            "suite": "Suite 449",
+            "city": "Bartholomebury",
+            "zipcode": "76495-3109",
+            "geo": {
+              "lat": "24.6463",
+              "lng": "-168.8889"
+            }
+          },
+          "phone": "(775)976-6794 x41206",
+          "website": "conrad.com",
+          "company": {
+            "name": "Yost and Sons",
+            "catchPhrase": "Switchable contextually-based project",
+            "bs": "aggregate real-time technologies"
+          }
+        },
+        {
+          "id": 10,
+          "name": "Clementina DuBuque",
+          "username": "Moriah.Stanton",
+          "email": "Rey.Padberg@karina.biz",
+          "address": {
+            "street": "Kattie Turnpike",
+            "suite": "Suite 198",
+            "city": "Lebsackbury",
+            "zipcode": "31428-2261",
+            "geo": {
+              "lat": "-38.2386",
+              "lng": "57.2232"
+            }
+          },
+          "phone": "024-648-3804",
+          "website": "ambrose.net",
+          "company": {
+            "name": "Hoeger LLC",
+            "catchPhrase": "Centralized empowering task-force",
+            "bs": "target end-to-end models"
+          }
+        }
+      ],
+      "patterns": [],
+      "success": false
+    },
+    {
+      "id": "2d4ffc7d-554f-46e6-a481-a20712fe8063",
+      "timestamp": 1757795545698,
+      "testContext": {
+        "testName": "",
+        "testType": "ui",
+        "startTime": 1757795535919,
+        "aiAnalysis": {
+          "id": "5ec76d8e-e68c-49c1-b4bc-da1ce68747e9",
+          "timestamp": 1757795545698,
+          "testFunction": "async (testData) => {\n        // Simulate a test function\n        return { success: true, data: testData };\n    }",
+          "testData": {
+            "element": {
+              "selector": "#login-button",
+              "description": "Login button on homepage"
+            }
+          },
+          "potentialIssues": [],
+          "recommendations": [
+            "Implement actual testing logic in the test function, such as interacting with the UI element specified in the test data.",
+            "Use assertions to verify the state or behavior of the system under test.",
+            "Handle potential errors or exceptions in the test function to prevent unexpected test failures.",
+            "Consider using a test framework or library that provides features for defining and running tests, such as Jest or Mocha."
+          ],
+          "confidence": 100,
+          "riskLevel": "high"
+        }
+      },
+      "result": {
+        "success": true,
+        "data": {
+          "element": {
+            "selector": "#login-button",
+            "description": "Login button on homepage"
+          }
+        }
+      },
+      "patterns": [],
+      "success": true
+    },
+    {
+      "id": "93ea4b20-72d0-4c23-8c2f-13a771a53532",
+      "timestamp": 1757795545699,
+      "testContext": {
+        "testName": "",
+        "testType": "ui",
+        "startTime": 1757795535919,
+        "aiAnalysis": {
+          "id": "5ec76d8e-e68c-49c1-b4bc-da1ce68747e9",
+          "timestamp": 1757795545698,
+          "testFunction": "async (testData) => {\n        // Simulate a test function\n        return { success: true, data: testData };\n    }",
+          "testData": {
+            "element": {
+              "selector": "#login-button",
+              "description": "Login button on homepage"
+            }
+          },
+          "potentialIssues": [],
+          "recommendations": [
+            "Implement actual testing logic in the test function, such as interacting with the UI element specified in the test data.",
+            "Use assertions to verify the state or behavior of the system under test.",
+            "Handle potential errors or exceptions in the test function to prevent unexpected test failures.",
+            "Consider using a test framework or library that provides features for defining and running tests, such as Jest or Mocha."
+          ],
+          "confidence": 100,
+          "riskLevel": "high"
+        }
+      },
+      "result": {
+        "success": true,
+        "data": {
+          "element": {
+            "selector": "#login-button",
+            "description": "Login button on homepage"
+          }
+        }
+      },
+      "patterns": [],
+      "success": true
+    },
+    {
+      "id": "f48fc7b6-4714-494b-9e83-d541d17b1999",
+      "timestamp": 1757795552408,
+      "testContext": {
+        "testName": "API Demo Test",
+        "testType": "api",
+        "startTime": 1757795545704,
+        "aiAnalysis": {
+          "id": "a43f9119-e536-4b02-82e0-13dfaaefcd85",
+          "timestamp": 1757795552311,
+          "testFunction": "async (testData) => {\n        const { endpoint, method, baseUrl } = testData;\n        \n        // This test might fail if the API endpoint changes\n        const response = await fetch(`${baseUrl}${endpoint}`, {\n            method: method,\n            headers: {\n                'Content-Type': 'application/json'\n            }\n        });\n        \n        if (!response.ok) {\n            throw new Error(`API request failed: ${response.status} ${response.statusText}`);\n        }\n        \n        const data = await response.json();\n        return data;\n    }",
+          "testData": {
+            "endpoint": "/users",
+            "method": "GET",
+            "baseUrl": "https://jsonplaceholder.typicode.com",
+            "expectedResponse": {
+              "id": {
+                "inverse": false
+              },
+              "name": {
+                "inverse": false
+              },
+              "email": {
+                "inverse": false
+              }
+            }
+          },
+          "potentialIssues": [],
+          "recommendations": [
+            "Implement validation of the response data against the expected response to ensure the API is returning the correct data.",
+            "Implement error handling for potential network errors or timeouts that could occur during the fetch request.",
+            "Implement error handling for potential errors that could occur when parsing the response data as JSON.",
+            "Implement error handling for cases where the response is OK but the data is null or undefined.",
+            "Implement error handling for cases where the response status is OK but the statusText is an error message."
+          ],
+          "confidence": 90,
+          "riskLevel": "high"
+        }
+      },
+      "result": [
+        {
+          "id": 1,
+          "name": "Leanne Graham",
+          "username": "Bret",
+          "email": "Sincere@april.biz",
+          "address": {
+            "street": "Kulas Light",
+            "suite": "Apt. 556",
+            "city": "Gwenborough",
+            "zipcode": "92998-3874",
+            "geo": {
+              "lat": "-37.3159",
+              "lng": "81.1496"
+            }
+          },
+          "phone": "1-770-736-8031 x56442",
+          "website": "hildegard.org",
+          "company": {
+            "name": "Romaguera-Crona",
+            "catchPhrase": "Multi-layered client-server neural-net",
+            "bs": "harness real-time e-markets"
+          }
+        },
+        {
+          "id": 2,
+          "name": "Ervin Howell",
+          "username": "Antonette",
+          "email": "Shanna@melissa.tv",
+          "address": {
+            "street": "Victor Plains",
+            "suite": "Suite 879",
+            "city": "Wisokyburgh",
+            "zipcode": "90566-7771",
+            "geo": {
+              "lat": "-43.9509",
+              "lng": "-34.4618"
+            }
+          },
+          "phone": "010-692-6593 x09125",
+          "website": "anastasia.net",
+          "company": {
+            "name": "Deckow-Crist",
+            "catchPhrase": "Proactive didactic contingency",
+            "bs": "synergize scalable supply-chains"
+          }
+        },
+        {
+          "id": 3,
+          "name": "Clementine Bauch",
+          "username": "Samantha",
+          "email": "Nathan@yesenia.net",
+          "address": {
+            "street": "Douglas Extension",
+            "suite": "Suite 847",
+            "city": "McKenziehaven",
+            "zipcode": "59590-4157",
+            "geo": {
+              "lat": "-68.6102",
+              "lng": "-47.0653"
+            }
+          },
+          "phone": "1-463-123-4447",
+          "website": "ramiro.info",
+          "company": {
+            "name": "Romaguera-Jacobson",
+            "catchPhrase": "Face to face bifurcated interface",
+            "bs": "e-enable strategic applications"
+          }
+        },
+        {
+          "id": 4,
+          "name": "Patricia Lebsack",
+          "username": "Karianne",
+          "email": "Julianne.OConner@kory.org",
+          "address": {
+            "street": "Hoeger Mall",
+            "suite": "Apt. 692",
+            "city": "South Elvis",
+            "zipcode": "53919-4257",
+            "geo": {
+              "lat": "29.4572",
+              "lng": "-164.2990"
+            }
+          },
+          "phone": "493-170-9623 x156",
+          "website": "kale.biz",
+          "company": {
+            "name": "Robel-Corkery",
+            "catchPhrase": "Multi-tiered zero tolerance productivity",
+            "bs": "transition cutting-edge web services"
+          }
+        },
+        {
+          "id": 5,
+          "name": "Chelsey Dietrich",
+          "username": "Kamren",
+          "email": "Lucio_Hettinger@annie.ca",
+          "address": {
+            "street": "Skiles Walks",
+            "suite": "Suite 351",
+            "city": "Roscoeview",
+            "zipcode": "33263",
+            "geo": {
+              "lat": "-31.8129",
+              "lng": "62.5342"
+            }
+          },
+          "phone": "(254)954-1289",
+          "website": "demarco.info",
+          "company": {
+            "name": "Keebler LLC",
+            "catchPhrase": "User-centric fault-tolerant solution",
+            "bs": "revolutionize end-to-end systems"
+          }
+        },
+        {
+          "id": 6,
+          "name": "Mrs. Dennis Schulist",
+          "username": "Leopoldo_Corkery",
+          "email": "Karley_Dach@jasper.info",
+          "address": {
+            "street": "Norberto Crossing",
+            "suite": "Apt. 950",
+            "city": "South Christy",
+            "zipcode": "23505-1337",
+            "geo": {
+              "lat": "-71.4197",
+              "lng": "71.7478"
+            }
+          },
+          "phone": "1-477-935-8478 x6430",
+          "website": "ola.org",
+          "company": {
+            "name": "Considine-Lockman",
+            "catchPhrase": "Synchronised bottom-line interface",
+            "bs": "e-enable innovative applications"
+          }
+        },
+        {
+          "id": 7,
+          "name": "Kurtis Weissnat",
+          "username": "Elwyn.Skiles",
+          "email": "Telly.Hoeger@billy.biz",
+          "address": {
+            "street": "Rex Trail",
+            "suite": "Suite 280",
+            "city": "Howemouth",
+            "zipcode": "58804-1099",
+            "geo": {
+              "lat": "24.8918",
+              "lng": "21.8984"
+            }
+          },
+          "phone": "210.067.6132",
+          "website": "elvis.io",
+          "company": {
+            "name": "Johns Group",
+            "catchPhrase": "Configurable multimedia task-force",
+            "bs": "generate enterprise e-tailers"
+          }
+        },
+        {
+          "id": 8,
+          "name": "Nicholas Runolfsdottir V",
+          "username": "Maxime_Nienow",
+          "email": "Sherwood@rosamond.me",
+          "address": {
+            "street": "Ellsworth Summit",
+            "suite": "Suite 729",
+            "city": "Aliyaview",
+            "zipcode": "45169",
+            "geo": {
+              "lat": "-14.3990",
+              "lng": "-120.7677"
+            }
+          },
+          "phone": "586.493.6943 x140",
+          "website": "jacynthe.com",
+          "company": {
+            "name": "Abernathy Group",
+            "catchPhrase": "Implemented secondary concept",
+            "bs": "e-enable extensible e-tailers"
+          }
+        },
+        {
+          "id": 9,
+          "name": "Glenna Reichert",
+          "username": "Delphine",
+          "email": "Chaim_McDermott@dana.io",
+          "address": {
+            "street": "Dayna Park",
+            "suite": "Suite 449",
+            "city": "Bartholomebury",
+            "zipcode": "76495-3109",
+            "geo": {
+              "lat": "24.6463",
+              "lng": "-168.8889"
+            }
+          },
+          "phone": "(775)976-6794 x41206",
+          "website": "conrad.com",
+          "company": {
+            "name": "Yost and Sons",
+            "catchPhrase": "Switchable contextually-based project",
+            "bs": "aggregate real-time technologies"
+          }
+        },
+        {
+          "id": 10,
+          "name": "Clementina DuBuque",
+          "username": "Moriah.Stanton",
+          "email": "Rey.Padberg@karina.biz",
+          "address": {
+            "street": "Kattie Turnpike",
+            "suite": "Suite 198",
+            "city": "Lebsackbury",
+            "zipcode": "31428-2261",
+            "geo": {
+              "lat": "-38.2386",
+              "lng": "57.2232"
+            }
+          },
+          "phone": "024-648-3804",
+          "website": "ambrose.net",
+          "company": {
+            "name": "Hoeger LLC",
+            "catchPhrase": "Centralized empowering task-force",
+            "bs": "target end-to-end models"
+          }
+        }
+      ],
+      "patterns": [],
+      "success": false
+    },
+    {
+      "id": "a39e31fe-0961-4d16-a55f-03b99a25f856",
+      "timestamp": 1757795907536,
+      "testContext": {
+        "testName": "",
+        "testType": "ui",
+        "startTime": 1757795898541,
+        "aiAnalysis": {
+          "id": "c0be3ec1-9986-420f-96fd-88827ad034a1",
+          "timestamp": 1757795907535,
+          "testFunction": "async (testData) => {\n        // Simulate a test function\n        return { success: true, data: testData };\n    }",
+          "testData": {
+            "element": {
+              "selector": "#login-button",
+              "description": "Login button on homepage"
+            }
+          },
+          "potentialIssues": [],
+          "recommendations": [
+            "Implement actual testing logic in the test function, such as interacting with the element specified in the test data and asserting expected behavior.",
+            "Use the 'element' object in the test data to perform actions or assertions on the specified element.",
+            "Do not hard-code the success status in the return value. Instead, determine the success status based on the outcome of the test."
+          ],
+          "confidence": 100,
+          "riskLevel": "medium"
+        }
+      },
+      "result": {
+        "success": true,
+        "data": {
+          "element": {
+            "selector": "#login-button",
+            "description": "Login button on homepage"
+          }
+        }
+      },
+      "patterns": [],
+      "success": true
+    },
+    {
+      "id": "01a865c7-16c8-4a25-a373-55523d1cacb3",
+      "timestamp": 1757795907536,
+      "testContext": {
+        "testName": "",
+        "testType": "ui",
+        "startTime": 1757795898541,
+        "aiAnalysis": {
+          "id": "c0be3ec1-9986-420f-96fd-88827ad034a1",
+          "timestamp": 1757795907535,
+          "testFunction": "async (testData) => {\n        // Simulate a test function\n        return { success: true, data: testData };\n    }",
+          "testData": {
+            "element": {
+              "selector": "#login-button",
+              "description": "Login button on homepage"
+            }
+          },
+          "potentialIssues": [],
+          "recommendations": [
+            "Implement actual testing logic in the test function, such as interacting with the element specified in the test data and asserting expected behavior.",
+            "Use the 'element' object in the test data to perform actions or assertions on the specified element.",
+            "Do not hard-code the success status in the return value. Instead, determine the success status based on the outcome of the test."
+          ],
+          "confidence": 100,
+          "riskLevel": "medium"
+        }
+      },
+      "result": {
+        "success": true,
+        "data": {
+          "element": {
+            "selector": "#login-button",
+            "description": "Login button on homepage"
+          }
+        }
+      },
+      "patterns": [],
+      "success": true
+    },
+    {
+      "id": "44178608-feb3-41f6-b341-3e5213b10d32",
+      "timestamp": 1757795913065,
+      "testContext": {
+        "testName": "API Demo Test",
+        "testType": "api",
+        "startTime": 1757795907544,
+        "aiAnalysis": {
+          "id": "803d0e68-6c6f-41b7-beb4-da40bff585d0",
+          "timestamp": 1757795912935,
+          "testFunction": "async (testData) => {\n        const { endpoint, method, baseUrl } = testData;\n        \n        // This test might fail if the API endpoint changes\n        const response = await fetch(`${baseUrl}${endpoint}`, {\n            method: method,\n            headers: {\n                'Content-Type': 'application/json'\n            }\n        });\n        \n        if (!response.ok) {\n            throw new Error(`API request failed: ${response.status} ${response.statusText}`);\n        }\n        \n        const data = await response.json();\n        return data;\n    }",
+          "testData": {
+            "endpoint": "/users",
+            "method": "GET",
+            "baseUrl": "https://jsonplaceholder.typicode.com",
+            "expectedResponse": {
+              "id": {
+                "inverse": false
+              },
+              "name": {
+                "inverse": false
+              },
+              "email": {
+                "inverse": false
+              }
+            }
+          },
+          "potentialIssues": [],
+          "recommendations": [
+            "Implement response validation to compare the actual response with the expected response.",
+            "Implement error handling for network errors or timeouts.",
+            "Implement a self-healing mechanism to handle changes in the API endpoint.",
+            "Implement a self-healing mechanism to handle changes in the API response structure.",
+            "Implement a self-healing mechanism to handle changes in the API response data type."
+          ],
+          "confidence": 90,
+          "riskLevel": "high"
+        }
+      },
+      "result": [
+        {
+          "id": 1,
+          "name": "Leanne Graham",
+          "username": "Bret",
+          "email": "Sincere@april.biz",
+          "address": {
+            "street": "Kulas Light",
+            "suite": "Apt. 556",
+            "city": "Gwenborough",
+            "zipcode": "92998-3874",
+            "geo": {
+              "lat": "-37.3159",
+              "lng": "81.1496"
+            }
+          },
+          "phone": "1-770-736-8031 x56442",
+          "website": "hildegard.org",
+          "company": {
+            "name": "Romaguera-Crona",
+            "catchPhrase": "Multi-layered client-server neural-net",
+            "bs": "harness real-time e-markets"
+          }
+        },
+        {
+          "id": 2,
+          "name": "Ervin Howell",
+          "username": "Antonette",
+          "email": "Shanna@melissa.tv",
+          "address": {
+            "street": "Victor Plains",
+            "suite": "Suite 879",
+            "city": "Wisokyburgh",
+            "zipcode": "90566-7771",
+            "geo": {
+              "lat": "-43.9509",
+              "lng": "-34.4618"
+            }
+          },
+          "phone": "010-692-6593 x09125",
+          "website": "anastasia.net",
+          "company": {
+            "name": "Deckow-Crist",
+            "catchPhrase": "Proactive didactic contingency",
+            "bs": "synergize scalable supply-chains"
+          }
+        },
+        {
+          "id": 3,
+          "name": "Clementine Bauch",
+          "username": "Samantha",
+          "email": "Nathan@yesenia.net",
+          "address": {
+            "street": "Douglas Extension",
+            "suite": "Suite 847",
+            "city": "McKenziehaven",
+            "zipcode": "59590-4157",
+            "geo": {
+              "lat": "-68.6102",
+              "lng": "-47.0653"
+            }
+          },
+          "phone": "1-463-123-4447",
+          "website": "ramiro.info",
+          "company": {
+            "name": "Romaguera-Jacobson",
+            "catchPhrase": "Face to face bifurcated interface",
+            "bs": "e-enable strategic applications"
+          }
+        },
+        {
+          "id": 4,
+          "name": "Patricia Lebsack",
+          "username": "Karianne",
+          "email": "Julianne.OConner@kory.org",
+          "address": {
+            "street": "Hoeger Mall",
+            "suite": "Apt. 692",
+            "city": "South Elvis",
+            "zipcode": "53919-4257",
+            "geo": {
+              "lat": "29.4572",
+              "lng": "-164.2990"
+            }
+          },
+          "phone": "493-170-9623 x156",
+          "website": "kale.biz",
+          "company": {
+            "name": "Robel-Corkery",
+            "catchPhrase": "Multi-tiered zero tolerance productivity",
+            "bs": "transition cutting-edge web services"
+          }
+        },
+        {
+          "id": 5,
+          "name": "Chelsey Dietrich",
+          "username": "Kamren",
+          "email": "Lucio_Hettinger@annie.ca",
+          "address": {
+            "street": "Skiles Walks",
+            "suite": "Suite 351",
+            "city": "Roscoeview",
+            "zipcode": "33263",
+            "geo": {
+              "lat": "-31.8129",
+              "lng": "62.5342"
+            }
+          },
+          "phone": "(254)954-1289",
+          "website": "demarco.info",
+          "company": {
+            "name": "Keebler LLC",
+            "catchPhrase": "User-centric fault-tolerant solution",
+            "bs": "revolutionize end-to-end systems"
+          }
+        },
+        {
+          "id": 6,
+          "name": "Mrs. Dennis Schulist",
+          "username": "Leopoldo_Corkery",
+          "email": "Karley_Dach@jasper.info",
+          "address": {
+            "street": "Norberto Crossing",
+            "suite": "Apt. 950",
+            "city": "South Christy",
+            "zipcode": "23505-1337",
+            "geo": {
+              "lat": "-71.4197",
+              "lng": "71.7478"
+            }
+          },
+          "phone": "1-477-935-8478 x6430",
+          "website": "ola.org",
+          "company": {
+            "name": "Considine-Lockman",
+            "catchPhrase": "Synchronised bottom-line interface",
+            "bs": "e-enable innovative applications"
+          }
+        },
+        {
+          "id": 7,
+          "name": "Kurtis Weissnat",
+          "username": "Elwyn.Skiles",
+          "email": "Telly.Hoeger@billy.biz",
+          "address": {
+            "street": "Rex Trail",
+            "suite": "Suite 280",
+            "city": "Howemouth",
+            "zipcode": "58804-1099",
+            "geo": {
+              "lat": "24.8918",
+              "lng": "21.8984"
+            }
+          },
+          "phone": "210.067.6132",
+          "website": "elvis.io",
+          "company": {
+            "name": "Johns Group",
+            "catchPhrase": "Configurable multimedia task-force",
+            "bs": "generate enterprise e-tailers"
+          }
+        },
+        {
+          "id": 8,
+          "name": "Nicholas Runolfsdottir V",
+          "username": "Maxime_Nienow",
+          "email": "Sherwood@rosamond.me",
+          "address": {
+            "street": "Ellsworth Summit",
+            "suite": "Suite 729",
+            "city": "Aliyaview",
+            "zipcode": "45169",
+            "geo": {
+              "lat": "-14.3990",
+              "lng": "-120.7677"
+            }
+          },
+          "phone": "586.493.6943 x140",
+          "website": "jacynthe.com",
+          "company": {
+            "name": "Abernathy Group",
+            "catchPhrase": "Implemented secondary concept",
+            "bs": "e-enable extensible e-tailers"
+          }
+        },
+        {
+          "id": 9,
+          "name": "Glenna Reichert",
+          "username": "Delphine",
+          "email": "Chaim_McDermott@dana.io",
+          "address": {
+            "street": "Dayna Park",
+            "suite": "Suite 449",
+            "city": "Bartholomebury",
+            "zipcode": "76495-3109",
+            "geo": {
+              "lat": "24.6463",
+              "lng": "-168.8889"
+            }
+          },
+          "phone": "(775)976-6794 x41206",
+          "website": "conrad.com",
+          "company": {
+            "name": "Yost and Sons",
+            "catchPhrase": "Switchable contextually-based project",
+            "bs": "aggregate real-time technologies"
+          }
+        },
+        {
+          "id": 10,
+          "name": "Clementina DuBuque",
+          "username": "Moriah.Stanton",
+          "email": "Rey.Padberg@karina.biz",
+          "address": {
+            "street": "Kattie Turnpike",
+            "suite": "Suite 198",
+            "city": "Lebsackbury",
+            "zipcode": "31428-2261",
+            "geo": {
+              "lat": "-38.2386",
+              "lng": "57.2232"
+            }
+          },
+          "phone": "024-648-3804",
+          "website": "ambrose.net",
+          "company": {
+            "name": "Hoeger LLC",
+            "catchPhrase": "Centralized empowering task-force",
+            "bs": "target end-to-end models"
+          }
+        }
+      ],
+      "patterns": [],
+      "success": false
+    },
+    {
+      "id": "b19f43fb-f4d4-48bc-84e6-7f8ee0c78c7a",
+      "timestamp": 1757796078526,
+      "testContext": {
+        "testName": "",
+        "testType": "ui",
+        "startTime": 1757796068074,
+        "aiAnalysis": {
+          "id": "ccfe8d7a-bab8-43f4-92de-4b2036f4c2cb",
+          "timestamp": 1757796078526,
+          "testFunction": "async (testData) => {\n        // Simulate a test function\n        return { success: true, data: testData };\n    }",
+          "testData": {
+            "element": {
+              "selector": "#login-button",
+              "description": "Login button on homepage"
+            }
+          },
+          "potentialIssues": [],
+          "recommendations": [
+            "Implement actual interaction with the element specified in the test data, such as clicking the button or checking its visibility.",
+            "Implement assertions to verify the state of the application after the interaction, such as checking if the user is logged in after clicking the login button.",
+            "Include actions and expected results in the test data, to allow the test function to perform meaningful tests."
+          ],
+          "confidence": 90,
+          "riskLevel": "medium"
+        }
+      },
+      "result": {
+        "success": true,
+        "data": {
+          "element": {
+            "selector": "#login-button",
+            "description": "Login button on homepage"
+          }
+        }
+      },
+      "patterns": [],
+      "success": true
+    },
+    {
+      "id": "d982ab51-96d7-4423-933e-fb0ba5730e05",
+      "timestamp": 1757796078527,
+      "testContext": {
+        "testName": "",
+        "testType": "ui",
+        "startTime": 1757796068074,
+        "aiAnalysis": {
+          "id": "ccfe8d7a-bab8-43f4-92de-4b2036f4c2cb",
+          "timestamp": 1757796078526,
+          "testFunction": "async (testData) => {\n        // Simulate a test function\n        return { success: true, data: testData };\n    }",
+          "testData": {
+            "element": {
+              "selector": "#login-button",
+              "description": "Login button on homepage"
+            }
+          },
+          "potentialIssues": [],
+          "recommendations": [
+            "Implement actual interaction with the element specified in the test data, such as clicking the button or checking its visibility.",
+            "Implement assertions to verify the state of the application after the interaction, such as checking if the user is logged in after clicking the login button.",
+            "Include actions and expected results in the test data, to allow the test function to perform meaningful tests."
+          ],
+          "confidence": 90,
+          "riskLevel": "medium"
+        }
+      },
+      "result": {
+        "success": true,
+        "data": {
+          "element": {
+            "selector": "#login-button",
+            "description": "Login button on homepage"
+          }
+        }
+      },
+      "patterns": [],
+      "success": true
+    },
+    {
+      "id": "38c802f5-651e-40e4-9e20-5052b8e15ef5",
+      "timestamp": 1757796086737,
+      "testContext": {
+        "testName": "API Demo Test",
+        "testType": "api",
+        "startTime": 1757796078535,
+        "aiAnalysis": {
+          "id": "5b7c45d8-9f20-4ca3-9db2-22d4c5298264",
+          "timestamp": 1757796086613,
+          "testFunction": "async (testData) => {\n        const { endpoint, method, baseUrl } = testData;\n        \n        // This test might fail if the API endpoint changes\n        const response = await fetch(`${baseUrl}${endpoint}`, {\n            method: method,\n            headers: {\n                'Content-Type': 'application/json'\n            }\n        });\n        \n        if (!response.ok) {\n            throw new Error(`API request failed: ${response.status} ${response.statusText}`);\n        }\n        \n        const data = await response.json();\n        return data;\n    }",
+          "testData": {
+            "endpoint": "/users",
+            "method": "GET",
+            "baseUrl": "https://jsonplaceholder.typicode.com",
+            "expectedResponse": {
+              "id": {
+                "inverse": false
+              },
+              "name": {
+                "inverse": false
+              },
+              "email": {
+                "inverse": false
+              }
+            }
+          },
+          "potentialIssues": [],
+          "recommendations": [
+            "Implement validation of the response data structure and content against the expected response to ensure the API is returning the correct data.",
+            "Implement error handling for network errors or timeouts that may occur during the fetch request to make the test more robust.",
+            "Implement error handling for cases where the response is not JSON-formatted to prevent the test from failing unexpectedly.",
+            "Implement error handling for cases where the response is OK but the data is null or undefined to prevent the test from failing unexpectedly.",
+            "Implement error handling for cases where the response status is OK but the statusText is an error message to make the test more accurate."
+          ],
+          "confidence": 90,
+          "riskLevel": "high"
+        }
+      },
+      "result": [
+        {
+          "id": 1,
+          "name": "Leanne Graham",
+          "username": "Bret",
+          "email": "Sincere@april.biz",
+          "address": {
+            "street": "Kulas Light",
+            "suite": "Apt. 556",
+            "city": "Gwenborough",
+            "zipcode": "92998-3874",
+            "geo": {
+              "lat": "-37.3159",
+              "lng": "81.1496"
+            }
+          },
+          "phone": "1-770-736-8031 x56442",
+          "website": "hildegard.org",
+          "company": {
+            "name": "Romaguera-Crona",
+            "catchPhrase": "Multi-layered client-server neural-net",
+            "bs": "harness real-time e-markets"
+          }
+        },
+        {
+          "id": 2,
+          "name": "Ervin Howell",
+          "username": "Antonette",
+          "email": "Shanna@melissa.tv",
+          "address": {
+            "street": "Victor Plains",
+            "suite": "Suite 879",
+            "city": "Wisokyburgh",
+            "zipcode": "90566-7771",
+            "geo": {
+              "lat": "-43.9509",
+              "lng": "-34.4618"
+            }
+          },
+          "phone": "010-692-6593 x09125",
+          "website": "anastasia.net",
+          "company": {
+            "name": "Deckow-Crist",
+            "catchPhrase": "Proactive didactic contingency",
+            "bs": "synergize scalable supply-chains"
+          }
+        },
+        {
+          "id": 3,
+          "name": "Clementine Bauch",
+          "username": "Samantha",
+          "email": "Nathan@yesenia.net",
+          "address": {
+            "street": "Douglas Extension",
+            "suite": "Suite 847",
+            "city": "McKenziehaven",
+            "zipcode": "59590-4157",
+            "geo": {
+              "lat": "-68.6102",
+              "lng": "-47.0653"
+            }
+          },
+          "phone": "1-463-123-4447",
+          "website": "ramiro.info",
+          "company": {
+            "name": "Romaguera-Jacobson",
+            "catchPhrase": "Face to face bifurcated interface",
+            "bs": "e-enable strategic applications"
+          }
+        },
+        {
+          "id": 4,
+          "name": "Patricia Lebsack",
+          "username": "Karianne",
+          "email": "Julianne.OConner@kory.org",
+          "address": {
+            "street": "Hoeger Mall",
+            "suite": "Apt. 692",
+            "city": "South Elvis",
+            "zipcode": "53919-4257",
+            "geo": {
+              "lat": "29.4572",
+              "lng": "-164.2990"
+            }
+          },
+          "phone": "493-170-9623 x156",
+          "website": "kale.biz",
+          "company": {
+            "name": "Robel-Corkery",
+            "catchPhrase": "Multi-tiered zero tolerance productivity",
+            "bs": "transition cutting-edge web services"
+          }
+        },
+        {
+          "id": 5,
+          "name": "Chelsey Dietrich",
+          "username": "Kamren",
+          "email": "Lucio_Hettinger@annie.ca",
+          "address": {
+            "street": "Skiles Walks",
+            "suite": "Suite 351",
+            "city": "Roscoeview",
+            "zipcode": "33263",
+            "geo": {
+              "lat": "-31.8129",
+              "lng": "62.5342"
+            }
+          },
+          "phone": "(254)954-1289",
+          "website": "demarco.info",
+          "company": {
+            "name": "Keebler LLC",
+            "catchPhrase": "User-centric fault-tolerant solution",
+            "bs": "revolutionize end-to-end systems"
+          }
+        },
+        {
+          "id": 6,
+          "name": "Mrs. Dennis Schulist",
+          "username": "Leopoldo_Corkery",
+          "email": "Karley_Dach@jasper.info",
+          "address": {
+            "street": "Norberto Crossing",
+            "suite": "Apt. 950",
+            "city": "South Christy",
+            "zipcode": "23505-1337",
+            "geo": {
+              "lat": "-71.4197",
+              "lng": "71.7478"
+            }
+          },
+          "phone": "1-477-935-8478 x6430",
+          "website": "ola.org",
+          "company": {
+            "name": "Considine-Lockman",
+            "catchPhrase": "Synchronised bottom-line interface",
+            "bs": "e-enable innovative applications"
+          }
+        },
+        {
+          "id": 7,
+          "name": "Kurtis Weissnat",
+          "username": "Elwyn.Skiles",
+          "email": "Telly.Hoeger@billy.biz",
+          "address": {
+            "street": "Rex Trail",
+            "suite": "Suite 280",
+            "city": "Howemouth",
+            "zipcode": "58804-1099",
+            "geo": {
+              "lat": "24.8918",
+              "lng": "21.8984"
+            }
+          },
+          "phone": "210.067.6132",
+          "website": "elvis.io",
+          "company": {
+            "name": "Johns Group",
+            "catchPhrase": "Configurable multimedia task-force",
+            "bs": "generate enterprise e-tailers"
+          }
+        },
+        {
+          "id": 8,
+          "name": "Nicholas Runolfsdottir V",
+          "username": "Maxime_Nienow",
+          "email": "Sherwood@rosamond.me",
+          "address": {
+            "street": "Ellsworth Summit",
+            "suite": "Suite 729",
+            "city": "Aliyaview",
+            "zipcode": "45169",
+            "geo": {
+              "lat": "-14.3990",
+              "lng": "-120.7677"
+            }
+          },
+          "phone": "586.493.6943 x140",
+          "website": "jacynthe.com",
+          "company": {
+            "name": "Abernathy Group",
+            "catchPhrase": "Implemented secondary concept",
+            "bs": "e-enable extensible e-tailers"
+          }
+        },
+        {
+          "id": 9,
+          "name": "Glenna Reichert",
+          "username": "Delphine",
+          "email": "Chaim_McDermott@dana.io",
+          "address": {
+            "street": "Dayna Park",
+            "suite": "Suite 449",
+            "city": "Bartholomebury",
+            "zipcode": "76495-3109",
+            "geo": {
+              "lat": "24.6463",
+              "lng": "-168.8889"
+            }
+          },
+          "phone": "(775)976-6794 x41206",
+          "website": "conrad.com",
+          "company": {
+            "name": "Yost and Sons",
+            "catchPhrase": "Switchable contextually-based project",
+            "bs": "aggregate real-time technologies"
+          }
+        },
+        {
+          "id": 10,
+          "name": "Clementina DuBuque",
+          "username": "Moriah.Stanton",
+          "email": "Rey.Padberg@karina.biz",
+          "address": {
+            "street": "Kattie Turnpike",
+            "suite": "Suite 198",
+            "city": "Lebsackbury",
+            "zipcode": "31428-2261",
+            "geo": {
+              "lat": "-38.2386",
+              "lng": "57.2232"
+            }
+          },
+          "phone": "024-648-3804",
+          "website": "ambrose.net",
+          "company": {
+            "name": "Hoeger LLC",
+            "catchPhrase": "Centralized empowering task-force",
+            "bs": "target end-to-end models"
+          }
+        }
+      ],
+      "patterns": [],
+      "success": false
+    },
+    {
+      "id": "ec6a7239-911e-4a21-a4ff-887225f147db",
+      "timestamp": 1757796421408,
+      "testContext": {
+        "testName": "",
+        "testType": "ui",
+        "startTime": 1757796411543,
+        "aiAnalysis": {
+          "id": "d8c378c0-3c26-44b2-9213-61f559a6b996",
+          "timestamp": 1757796421407,
+          "testFunction": "async (testData) => {\n        // Simulate a test function\n        return { success: true, data: testData };\n    }",
+          "testData": {
+            "element": {
+              "selector": "#login-button",
+              "description": "Login button on homepage"
+            }
+          },
+          "potentialIssues": [],
+          "recommendations": [
+            "Implement actual testing logic in the test function, such as interacting with the specified 'element' and verifying its behavior.",
+            "Add error handling to the test function to ensure it behaves correctly with invalid input data.",
+            "Validate the input data before using it, to ensure it has the expected structure and values."
+          ],
+          "confidence": 100,
+          "riskLevel": "high"
+        }
+      },
+      "result": {
+        "success": true,
+        "data": {
+          "element": {
+            "selector": "#login-button",
+            "description": "Login button on homepage"
+          }
+        }
+      },
+      "patterns": [],
+      "success": true
+    },
+    {
+      "id": "3ed76b5e-5b7b-478b-b660-21f300ac1114",
+      "timestamp": 1757796421409,
+      "testContext": {
+        "testName": "",
+        "testType": "ui",
+        "startTime": 1757796411543,
+        "aiAnalysis": {
+          "id": "d8c378c0-3c26-44b2-9213-61f559a6b996",
+          "timestamp": 1757796421407,
+          "testFunction": "async (testData) => {\n        // Simulate a test function\n        return { success: true, data: testData };\n    }",
+          "testData": {
+            "element": {
+              "selector": "#login-button",
+              "description": "Login button on homepage"
+            }
+          },
+          "potentialIssues": [],
+          "recommendations": [
+            "Implement actual testing logic in the test function, such as interacting with the specified 'element' and verifying its behavior.",
+            "Add error handling to the test function to ensure it behaves correctly with invalid input data.",
+            "Validate the input data before using it, to ensure it has the expected structure and values."
+          ],
+          "confidence": 100,
+          "riskLevel": "high"
+        }
+      },
+      "result": {
+        "success": true,
+        "data": {
+          "element": {
+            "selector": "#login-button",
+            "description": "Login button on homepage"
+          }
+        }
+      },
+      "patterns": [],
+      "success": true
+    },
+    {
+      "id": "1ac6db7d-ded9-4f9c-84e9-5da355358db7",
+      "timestamp": 1757796428511,
+      "testContext": {
+        "testName": "API Demo Test",
+        "testType": "api",
+        "startTime": 1757796421420,
+        "aiAnalysis": {
+          "id": "32cbb0d3-b4b7-4a6a-a751-4a3fd758678b",
+          "timestamp": 1757796428409,
+          "testFunction": "async (testData) => {\n        const { endpoint, method, baseUrl } = testData;\n        \n        // This test might fail if the API endpoint changes\n        const response = await fetch(`${baseUrl}${endpoint}`, {\n            method: method,\n            headers: {\n                'Content-Type': 'application/json'\n            }\n        });\n        \n        if (!response.ok) {\n            throw new Error(`API request failed: ${response.status} ${response.statusText}`);\n        }\n        \n        const data = await response.json();\n        return data;\n    }",
+          "testData": {
+            "endpoint": "/users",
+            "method": "GET",
+            "baseUrl": "https://jsonplaceholder.typicode.com",
+            "expectedResponse": {
+              "id": {
+                "inverse": false
+              },
+              "name": {
+                "inverse": false
+              },
+              "email": {
+                "inverse": false
+              }
+            }
+          },
+          "potentialIssues": [],
+          "recommendations": [
+            "Implement validation of the response data structure and content against the expected response using a schema validation library or custom validation logic.",
+            "Implement error handling for network errors and timeouts during the API request using try-catch blocks or error handling middleware.",
+            "Implement error handling for cases where the response is not JSON-formatted using try-catch blocks or error handling middleware.",
+            "Implement error handling for cases where the response is ok but the data is null or undefined using conditional checks.",
+            "Implement error handling for cases where the response status is ok but the statusText is an error message using conditional checks."
+          ],
+          "confidence": 90,
+          "riskLevel": "high"
+        }
+      },
+      "result": [
+        {
+          "id": 1,
+          "name": "Leanne Graham",
+          "username": "Bret",
+          "email": "Sincere@april.biz",
+          "address": {
+            "street": "Kulas Light",
+            "suite": "Apt. 556",
+            "city": "Gwenborough",
+            "zipcode": "92998-3874",
+            "geo": {
+              "lat": "-37.3159",
+              "lng": "81.1496"
+            }
+          },
+          "phone": "1-770-736-8031 x56442",
+          "website": "hildegard.org",
+          "company": {
+            "name": "Romaguera-Crona",
+            "catchPhrase": "Multi-layered client-server neural-net",
+            "bs": "harness real-time e-markets"
+          }
+        },
+        {
+          "id": 2,
+          "name": "Ervin Howell",
+          "username": "Antonette",
+          "email": "Shanna@melissa.tv",
+          "address": {
+            "street": "Victor Plains",
+            "suite": "Suite 879",
+            "city": "Wisokyburgh",
+            "zipcode": "90566-7771",
+            "geo": {
+              "lat": "-43.9509",
+              "lng": "-34.4618"
+            }
+          },
+          "phone": "010-692-6593 x09125",
+          "website": "anastasia.net",
+          "company": {
+            "name": "Deckow-Crist",
+            "catchPhrase": "Proactive didactic contingency",
+            "bs": "synergize scalable supply-chains"
+          }
+        },
+        {
+          "id": 3,
+          "name": "Clementine Bauch",
+          "username": "Samantha",
+          "email": "Nathan@yesenia.net",
+          "address": {
+            "street": "Douglas Extension",
+            "suite": "Suite 847",
+            "city": "McKenziehaven",
+            "zipcode": "59590-4157",
+            "geo": {
+              "lat": "-68.6102",
+              "lng": "-47.0653"
+            }
+          },
+          "phone": "1-463-123-4447",
+          "website": "ramiro.info",
+          "company": {
+            "name": "Romaguera-Jacobson",
+            "catchPhrase": "Face to face bifurcated interface",
+            "bs": "e-enable strategic applications"
+          }
+        },
+        {
+          "id": 4,
+          "name": "Patricia Lebsack",
+          "username": "Karianne",
+          "email": "Julianne.OConner@kory.org",
+          "address": {
+            "street": "Hoeger Mall",
+            "suite": "Apt. 692",
+            "city": "South Elvis",
+            "zipcode": "53919-4257",
+            "geo": {
+              "lat": "29.4572",
+              "lng": "-164.2990"
+            }
+          },
+          "phone": "493-170-9623 x156",
+          "website": "kale.biz",
+          "company": {
+            "name": "Robel-Corkery",
+            "catchPhrase": "Multi-tiered zero tolerance productivity",
+            "bs": "transition cutting-edge web services"
+          }
+        },
+        {
+          "id": 5,
+          "name": "Chelsey Dietrich",
+          "username": "Kamren",
+          "email": "Lucio_Hettinger@annie.ca",
+          "address": {
+            "street": "Skiles Walks",
+            "suite": "Suite 351",
+            "city": "Roscoeview",
+            "zipcode": "33263",
+            "geo": {
+              "lat": "-31.8129",
+              "lng": "62.5342"
+            }
+          },
+          "phone": "(254)954-1289",
+          "website": "demarco.info",
+          "company": {
+            "name": "Keebler LLC",
+            "catchPhrase": "User-centric fault-tolerant solution",
+            "bs": "revolutionize end-to-end systems"
+          }
+        },
+        {
+          "id": 6,
+          "name": "Mrs. Dennis Schulist",
+          "username": "Leopoldo_Corkery",
+          "email": "Karley_Dach@jasper.info",
+          "address": {
+            "street": "Norberto Crossing",
+            "suite": "Apt. 950",
+            "city": "South Christy",
+            "zipcode": "23505-1337",
+            "geo": {
+              "lat": "-71.4197",
+              "lng": "71.7478"
+            }
+          },
+          "phone": "1-477-935-8478 x6430",
+          "website": "ola.org",
+          "company": {
+            "name": "Considine-Lockman",
+            "catchPhrase": "Synchronised bottom-line interface",
+            "bs": "e-enable innovative applications"
+          }
+        },
+        {
+          "id": 7,
+          "name": "Kurtis Weissnat",
+          "username": "Elwyn.Skiles",
+          "email": "Telly.Hoeger@billy.biz",
+          "address": {
+            "street": "Rex Trail",
+            "suite": "Suite 280",
+            "city": "Howemouth",
+            "zipcode": "58804-1099",
+            "geo": {
+              "lat": "24.8918",
+              "lng": "21.8984"
+            }
+          },
+          "phone": "210.067.6132",
+          "website": "elvis.io",
+          "company": {
+            "name": "Johns Group",
+            "catchPhrase": "Configurable multimedia task-force",
+            "bs": "generate enterprise e-tailers"
+          }
+        },
+        {
+          "id": 8,
+          "name": "Nicholas Runolfsdottir V",
+          "username": "Maxime_Nienow",
+          "email": "Sherwood@rosamond.me",
+          "address": {
+            "street": "Ellsworth Summit",
+            "suite": "Suite 729",
+            "city": "Aliyaview",
+            "zipcode": "45169",
+            "geo": {
+              "lat": "-14.3990",
+              "lng": "-120.7677"
+            }
+          },
+          "phone": "586.493.6943 x140",
+          "website": "jacynthe.com",
+          "company": {
+            "name": "Abernathy Group",
+            "catchPhrase": "Implemented secondary concept",
+            "bs": "e-enable extensible e-tailers"
+          }
+        },
+        {
+          "id": 9,
+          "name": "Glenna Reichert",
+          "username": "Delphine",
+          "email": "Chaim_McDermott@dana.io",
+          "address": {
+            "street": "Dayna Park",
+            "suite": "Suite 449",
+            "city": "Bartholomebury",
+            "zipcode": "76495-3109",
+            "geo": {
+              "lat": "24.6463",
+              "lng": "-168.8889"
+            }
+          },
+          "phone": "(775)976-6794 x41206",
+          "website": "conrad.com",
+          "company": {
+            "name": "Yost and Sons",
+            "catchPhrase": "Switchable contextually-based project",
+            "bs": "aggregate real-time technologies"
+          }
+        },
+        {
+          "id": 10,
+          "name": "Clementina DuBuque",
+          "username": "Moriah.Stanton",
+          "email": "Rey.Padberg@karina.biz",
+          "address": {
+            "street": "Kattie Turnpike",
+            "suite": "Suite 198",
+            "city": "Lebsackbury",
+            "zipcode": "31428-2261",
+            "geo": {
+              "lat": "-38.2386",
+              "lng": "57.2232"
+            }
+          },
+          "phone": "024-648-3804",
+          "website": "ambrose.net",
+          "company": {
+            "name": "Hoeger LLC",
+            "catchPhrase": "Centralized empowering task-force",
+            "bs": "target end-to-end models"
+          }
+        }
+      ],
+      "patterns": [],
+      "success": false
+    }
+  ],
+  "patterns": [],
+  "lastUpdated": 1757796428515
+}

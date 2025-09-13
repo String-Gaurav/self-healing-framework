@@ -1,0 +1,84 @@
+{
+  "patterns": [
+    [
+      null,
+      {
+        "successCount": 2,
+        "totalCount": 2,
+        "successRate": 1
+      }
+    ],
+    [
+      "data_adjustment_healing",
+      {
+        "name": "data_adjustment_healing",
+        "description": "Ensure the data used in the test is valid and up-to-date",
+        "implementation": "return { success: true, data: 'updated_data' };",
+        "successCount": 2,
+        "totalCount": 2,
+        "successRate": 1
+      }
+    ],
+    [
+      "data_adjustment",
+      {
+        "name": "data_adjustment",
+        "description": "Check if the data causing the element to load slowly can be optimized",
+        "implementation": "return { success: true, data: 'Optimized data' };",
+        "successCount": 1,
+        "totalCount": 1,
+        "successRate": 1
+      }
+    ],
+    [
+      null,
+      {
+        "successCount": 1,
+        "totalCount": 1,
+        "successRate": 1
+      }
+    ]
+  ],
+  "successRates": [
+    [
+      "data_adjustment_healing",
+      0.875
+    ],
+    [
+      "data_adjustment",
+      0.75
+    ]
+  ],
+  "healingHistory": [
+    {
+      "timestamp": 1757796068054,
+      "strategy": "data_adjustment_healing",
+      "success": true,
+      "result": {
+        "success": true,
+        "data": "updated_data"
+      },
+      "context": {}
+    },
+    {
+      "timestamp": 1757796355732,
+      "strategy": "data_adjustment_healing",
+      "success": true,
+      "result": {
+        "success": true
+      },
+      "context": {}
+    },
+    {
+      "timestamp": 1757796388798,
+      "strategy": "data_adjustment",
+      "success": true,
+      "result": {
+        "success": true,
+        "data": "Optimized data"
+      },
+      "context": {}
+    }
+  ],
+  "lastUpdated": 1757796428513
+}
