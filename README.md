@@ -461,20 +461,6 @@ const framework = new BaseFramework({
 });
 ```
 
-## License
-
-MIT License - see LICENSE file for details.
-
-## Support
-
-For issues and questions:
-1. Check the troubleshooting section
-2. Review the logs
-3. Create an issue on GitHub
-4. Contact the maintainers
-
-## Roadmap
-
 - [ ] Support for more AI providers
 - [ ] Additional healing strategies
 - [ ] Web UI for monitoring and configuration
